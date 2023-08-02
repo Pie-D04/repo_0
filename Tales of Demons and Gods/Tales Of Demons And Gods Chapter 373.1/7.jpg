@@ -1,0 +1,2462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;" charset="UTF-8">
+    <title>Read Free Manga Online at Ten Manga</title>
+    <META content=" " name=Keywords>
+    <META content="  " name="Description">
+    <meta content='width=device-width,  initial-scale=1.0' name='viewport'>
+    <meta name="apple-mobile-web-app-title" content="OurClub">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="format-detection" content="telephone=no, email=no"/>
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="format-detection" content="telephone=no, email=no">
+        <link rel="Shortcut Icon" href="https://www.tenmanga.com/files/img/144.png" type="image/x-icon" />
+    <link rel="apple-touch-icon" sizes="57x57" href="https://www.tenmanga.com/files/img/57.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="https://www.tenmanga.com/files/img/114.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="https://www.tenmanga.com/files/img/72.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="https://www.tenmanga.com/files/img/144.png" />
+    <link href="https://www.tenmanga.com/files/img/favicon.ico" rel="icon" type="image/x-icon" />
+    <link href="https://www.tenmanga.com/files/img/favicon.ico" rel="shortcut icon" type="image/x-icon" /-->
+    <link type="text/css" rel="stylesheet" href="/files/css/font_style.css?v=47"/>
+    <script>
+        function getCookie(name) {
+            var arg = name + "=";
+            var alen = arg.length;
+            var clen = document.cookie.length;
+            var i = 0;
+            while (i < clen) {
+                var j = i + alen;
+                if (document.cookie.substring(i, j) == arg) {
+                    return getCookieVal(j);
+                }
+                i = document.cookie.indexOf(" ", i) + 1;
+                if (i == 0)
+                    break;
+            }
+            return null;
+        }
+        function getCookieVal(offset) {
+            var endstr = document.cookie.indexOf(";", offset);
+            if (endstr == -1) {
+                endstr = document.cookie.length;
+            }
+            return document.cookie.substring(offset, endstr);
+        }
+
+        var COOKIE_PRE = "dm72_";
+        USER = {
+            NAME: getCookie(COOKIE_PRE + "username") && decodeURI(getCookie(COOKIE_PRE + "username").replace(/\+/g, " ")),
+            ID: getCookie(COOKIE_PRE + "userid"),
+            COVER: getCookie(COOKIE_PRE + "cover")
+        };
+
+        var ajax_url = "https://my.tenmanga.com";
+    </script>
+        <link type="text/css" rel="stylesheet" href="https://www.tenmanga.com/files/dist/css/index/index.css?v=47"/>
+    </head>
+<body>
+<!--导航-->
+<!--导航条-->
+<div class="top-nav">
+    <!--m-->
+    <div class="top-nav-content-mob">
+        <div class="top-nav-l-mob-box">
+            <div class="top-nav-item-mob mob-nav-trigger"><span class="ifont-menu"></span></div>
+        </div>
+        <div class="top-nav-c-mob-box">
+            <div class="top-nav-center-mob">
+                <a href="https://www.tenmanga.com/">
+                    <div class="nav-logo"><img src="https://www.tenmanga.com/files/img/logo.svg" alt=""/></div>
+                </a>
+            </div>
+        </div>
+        <div class="top-nav-r-mob-box">
+            <div class="top-nav-item-mob">
+                <script>
+                    (function () {
+                        var str = "";
+                        str += "<a href=\""+ajax_url+"/account/following.html\" title=\"Following\">";
+                        str += "    <div><span class='ifont-bookshelf'></span></div>";
+                        str += "</a>";
+                        document.write(str);
+                    })();
+                </script>
+            </div>
+            <div class="top-nav-item-mob search-input-show mob">
+                <span class="ifont-search"></span>
+            </div>
+        </div>
+    </div>
+
+    <!--pc-->
+    <div class="top-nav-content">
+        <div class="top-nav-left">
+            <a href="https://www.tenmanga.com/" title="">
+                <div class="nav-logo"><img src="/files/img/logo.svg" alt=""/></div>
+            </a>
+        </div>
+        <!--菜单-->
+        <div class="top-nav-center">
+            <a href="https://www.tenmanga.com/" title="Home"><div class="top-nav-item top-nav-link active">Home</div></a>
+            <a href="https://www.tenmanga.com/list/New-Update/" title="Latest update"><div class="top-nav-item top-nav-link ">Latest Update</div></a>
+            <a href="https://www.tenmanga.com/category/" title="Genres"><div class="top-nav-item top-nav-link ">Genres</div></a>
+            <a href="https://www.tenmanga.com/surpriseme/" title="Surprise"><div class="top-nav-item top-nav-link">Surprise</div></a>
+        </div>
+        <div class="top-nav-right">
+            <!--搜索-->
+            <div class="nav-search-pool-mob">
+                <form class="nav-search-input-box-pc" method="get" action="/search/">
+                    <div class="nav-search-type-box">
+                        <div class="nav-search-input">
+                            <div class="nav-search-input-inner-mob">
+                                <input class="nav-search-input-trigger" placeholder="Search" type="text" name="wd" autocomplete="off"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ifont-cross-solid nav-search-reset-trigger pointer"></div>
+                    <!--搜索结果-->
+                    <div class="nav-search-res">
+                        <div class="nav-search-res-user">
+                            <!--这里是 搜索结果单项-->
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <script>
+                (function () {
+                    var str = "";
+                    if(!USER.ID){ // 未登录
+                        str += "<a href='/login/'><div class=\"top-nav-item top-nav-link\">Sign In</div></a>";
+                        document.write(str);
+                    }
+                    else {
+                        str += "<div class=\"top-nav-item has-user-entrance position-relative\">";
+                        str += "    <div class=\"top-nav-item top-nav-link\">"+USER.NAME+"</div>";
+                        str += "    <div class=\"nav-user-entrance\">";
+                        str += "        <a href=\""+ajax_url+"/account/following.html\" title=\"Following\"><div class=\"nav-user-en-item\">Following</div></a>";
+                        str += "        <a href=\""+ajax_url+"/account/history.html\" title=\"History\"><div class=\"nav-user-en-item\">History</div></a>";
+                        str += "        <a href=\""+ajax_url+"/account/setting.html\" title=\"Setting\"><div class=\"nav-user-en-item\">Setting</div></a>";
+                        str += "        <a href=\""+ajax_url+"/logout.html/\" title=\"Log out\"><div class=\"nav-user-en-item\">Log out</div></a>";
+                        str += "    </div>";
+                        str += "</div>";
+                        document.write(str);
+                    }
+                })();
+            </script>
+        </div>
+    </div>
+
+    <!--搜索-->
+    <div class="nav-search-pool dis-hide">
+        <form class="nav-search-input-box" method="get" action="/search">
+            <div class="nav-search-type-box">
+                <div>
+                    <div class="nav-search-input">
+                        <div class="nav-search-input-inner">
+                            <input class="nav-search-input-trigger" placeholder="Search" type="text" name="wd" autocomplete="off"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ifont-cross-solid nav-search-reset-trigger pointer"></div>
+        </form>
+        <div class="ifont-cross search-input-hide pointer"></div>
+        <!--搜索结果-->
+        <div class="nav-search-res">
+            <div class="nav-search-res-user">
+                <!--这里是 搜索结果单项-->
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--移动端侧栏菜单-->
+<div class="top-nav-side dis-hide">
+    <div class="top-nav-side-layer"></div>
+    <div class="top-nav-side-content" >
+        <div class="top-nav-side-list">
+            <!--关闭-->
+            <div class="top-nav-side-cls-box">
+                <div class="top-nav-side-cls">
+                    <span class="ifont-cross"></span>
+                </div>
+            </div>
+
+            <a href="https://www.tenmanga.com/" title="Home"><div class="top-nav-item active">Home</div></a>
+            <a href="https://www.tenmanga.com/list/New-Update/" title="Latest Update"><div class="top-nav-item ">Latest Update</div></a>
+            <a href="https://www.tenmanga.com/category/" title="Genres"><div class="top-nav-item ">Genres</div></a>
+            <a href="https://www.tenmanga.com/surpriseme/" title="Surprise"><div class="top-nav-item">Surprise</div></a>
+
+            <!--已登录，显示-->
+            <script>
+                (function () {
+                    var str = "";
+                    if(USER.ID){ // 已登录
+                        str += "<a href=\""+ajax_url+"/account/following.html\"><div class=\"top-nav-item \">Follow</div></a>";
+                        str += "<a href=\""+ajax_url+"/account/history.html\"><div class=\"top-nav-item \">History</div></a>";
+                        str += "<a href=\""+ajax_url+"/account/setting.html\"><div class=\"top-nav-item \">Setting</div></a>";
+                        str += "<a href=\""+ajax_url+"/logout.html\"><div class=\"top-nav-item\">Logout</div></a>";
+                        document.write(str);
+                    }
+                })();
+            </script>
+
+            <!--未登录提示登录-->
+            <script>
+                (function () {
+                    if(!USER.ID){ // 未登录
+                        var str = "<a href='/login/'><div class=\"top-nav-item\" model_type=\"only\" model_target_name=\"login\">Sign In</div></a>";
+                        document.write(str);
+                    }
+                })();
+            </script>
+        </div>
+    </div>
+</div><div class="brief-nav-temp-box scroll-fix">
+    <div class="brief-nav scroll-fix-content" id="brief_nav">
+        <div class="bf-nav-item active">
+            <a href="/"><div>Discovery</div></a>
+        </div>
+        <div class="bf-nav-item ">
+            <a href="https://www.tenmanga.com/list/New-Update/.html"><div>Latest Update</div></a>
+        </div>
+        <div class="bf-nav-item ">
+            <a href="https://www.tenmanga.com/category/.html"><div>Genres</div></a>
+        </div>
+    </div>
+</div><div class="page-sec">
+    <div class="tag-ls" id="tag_ls">
+        <div class="tag-item">
+            <a href="https://www.tenmanga.com/category/action_latest.html"><div class="">Action</div></a>
+        </div>
+        <div class="tag-item">
+            <a href="https://www.tenmanga.com/category/Martial Arts_latest.html"><div class="">Martial Arts</div></a>
+        </div>
+        <div class="tag-item">
+            <a href="https://www.tenmanga.com/category/Smut_latest.html"><div class="">Smut</div></a>
+        </div>
+        <div class="tag-item">
+            <a href="https://www.tenmanga.com/category/fantasy_latest.html"><div class="">Fantasy</div></a>
+        </div>
+        <div class="tag-item">
+            <a href="https://www.tenmanga.com/category/mature_latest.html"><div class="">Mature</div></a>
+        </div>
+        <div class="tag-item">
+            <a href="https://www.tenmanga.com/category/Doujinshi_latest.html"><div class="">Doujinshi</div></a>
+        </div>
+        <div class="tag-item">
+            <a href="https://www.tenmanga.com/category/romance_latest.html"><div class="">Romance</div></a>
+        </div>
+        <div class="tag-item more">
+            <a href="https://www.tenmanga.com/category/"><div class="">More <span class="ifont-arrow-right"></span></div></a>
+        </div>
+    </div>
+</div>
+<!--Latest Manga Updates-->
+<div class="page-sec">
+    <div class="sec-title">Latest Updates<a href="/list/New-Update/" title=""><div class="more-btn">More <span class="ifont-arrow-right"></span></div></a></div>
+    <div class="book-ls book-ls-oneline">
+                <div class="book-item">
+            <div class="book-inner-box">
+                <a href="https://www.tenmanga.com/book/Choukyori+Renai+no+Kodoku.html" alt="Choukyori Renai no Kodoku" title="Choukyori Renai no Kodoku">
+                    <div class="book-img">
+                        <img src="/files/img/default.png" class="lazy-img" lazy_url="https://ta1.yx247.com/files/img/logo/202305/202305172249474379.jpg" onerror="this.src='/files/img/default.png'" alt=""/>
+                    </div>
+                </a>
+                <a href="https://www.tenmanga.com/book/Choukyori+Renai+no+Kodoku.html" alt="Choukyori Renai no Kodoku" title="Choukyori Renai no Kodoku">
+                    <div class="book-name">Choukyori Renai no Kodoku</div>
+                </a>
+                <div class="cate-ls">
+                                                            <a href="https://www.tenmanga.com/category/drama.html" alt="drama"><div class="cate-item">drama</div></a>
+                                                                                <a href="https://www.tenmanga.com/category/romance.html" alt="romance"><div class="cate-item">romance</div></a>
+                                                                                                                                        </div>
+                <a href="https://www.tenmanga.com/chapter/ChoukyoriRenainoKodoku01/8572354/" alt="Choukyori Renai no Kodoku 0.1" title="Choukyori Renai no Kodoku 0.1">
+                <div class="book-chp-info">
+                    <div class="book-chp">Choukyori Renai no Kodoku 0.1</div>
+                    <span class="book-time">7 mins ago</span>
+                </div>
+            </a>
+            </div>
+        </div>
+                <div class="book-item">
+            <div class="book-inner-box">
+                <a href="https://www.tenmanga.com/book/JIBAKU+SHOUNEN+HANAKO-KUN.html" alt="JIBAKU SHOUNEN HANAKO-KUN" title="JIBAKU SHOUNEN HANAKO-KUN">
+                    <div class="book-img">
+                        <img src="/files/img/default.png" class="lazy-img" lazy_url="https://ta1.yx247.com/files/img/logo/201801/201801170150183639.jpg" onerror="this.src='/files/img/default.png'" alt=""/>
+                    </div>
+                </a>
+                <a href="https://www.tenmanga.com/book/JIBAKU+SHOUNEN+HANAKO-KUN.html" alt="JIBAKU SHOUNEN HANAKO-KUN" title="JIBAKU SHOUNEN HANAKO-KUN">
+                    <div class="book-name">JIBAKU SHOUNEN HANAKO-KUN</div>
+                </a>
+                <div class="cate-ls">
+                                                            <a href="https://www.tenmanga.com/category/comedy.html" alt="comedy"><div class="cate-item">comedy</div></a>
+                                                                                <a href="https://www.tenmanga.com/category/school+life.html" alt="school life"><div class="cate-item">school life</div></a>
+                                                                                                                                        </div>
+                <a href="https://www.tenmanga.com/chapter/JibakuShounenHanakokun102/8572353/" alt="Jibaku Shounen Hanako-kun 102" title="Jibaku Shounen Hanako-kun 102">
+                <div class="book-chp-info">
+                    <div class="book-chp">Jibaku Shounen Hanako-kun 102</div>
+                    <span class="book-time">8 mins ago</span>
+                </div>
+            </a>
+            </div>
+        </div>
+                <div class="book-item">
+            <div class="book-inner-box">
+                <a href="https://www.tenmanga.com/book/Tonari+no+Onee-san+ga+Suki.html" alt="Tonari no Onee-san ga Suki" title="Tonari no Onee-san ga Suki">
+                    <div class="book-img">
+                        <img src="/files/img/default.png" class="lazy-img" lazy_url="https://ta1.yx247.com/files/img/logo/202203/202203210102341782.jpg" onerror="this.src='/files/img/default.png'" alt=""/>
+                    </div>
+                </a>
+                <a href="https://www.tenmanga.com/book/Tonari+no+Onee-san+ga+Suki.html" alt="Tonari no Onee-san ga Suki" title="Tonari no Onee-san ga Suki">
+                    <div class="book-name">Tonari no Onee-san ga Suki</div>
+                </a>
+                <div class="cate-ls">
+                                                            <a href="https://www.tenmanga.com/category/comedy.html" alt="comedy"><div class="cate-item">comedy</div></a>
+                                                                                <a href="https://www.tenmanga.com/category/romance.html" alt="romance"><div class="cate-item">romance</div></a>
+                                                                                                </div>
+                <a href="https://www.tenmanga.com/chapter/TonarinoOneesangaSuki38/8572352/" alt="Tonari no Onee-san ga Suki 38" title="Tonari no Onee-san ga Suki 38">
+                <div class="book-chp-info">
+                    <div class="book-chp">Tonari no Onee-san ga Suki 38</div>
+                    <span class="book-time">8 mins ago</span>
+                </div>
+            </a>
+            </div>
+        </div>
+                <div class="book-item">
+            <div class="book-inner-box">
+                <a href="https://www.tenmanga.com/book/Takako-san.html" alt="Takako-san" title="Takako-san">
+                    <div class="book-img">
+                        <img src="/files/img/default.png" class="lazy-img" lazy_url="https://ta1.yx247.com/files/img/logo/202212/202212052226378714.jpg" onerror="this.src='/files/img/default.png'" alt=""/>
+                    </div>
+                </a>
+                <a href="https://www.tenmanga.com/book/Takako-san.html" alt="Takako-san" title="Takako-san">
+                    <div class="book-name">Takako-san</div>
+                </a>
+                <div class="cate-ls">
+                                                            <a href="https://www.tenmanga.com/category/slice+of+life.html" alt="slice of life"><div class="cate-item">slice of life</div></a>
+                                                        </div>
+                <a href="https://www.tenmanga.com/chapter/Takakosan61/8572351/" alt="Takako-san 61" title="Takako-san 61">
+                <div class="book-chp-info">
+                    <div class="book-chp">Takako-san 61</div>
+                    <span class="book-time">8 mins ago</span>
+                </div>
+            </a>
+            </div>
+        </div>
+                <div class="book-item">
+            <div class="book-inner-box">
+                <a href="https://www.tenmanga.com/book/Leveling+My+Husband+To+The+Max.html" alt="Leveling My Husband To The Max" title="Leveling My Husband To The Max">
+                    <div class="book-img">
+                        <img src="/files/img/default.png" class="lazy-img" lazy_url="https://ta1.yx247.com/files/img/logo/202106/202106270621005185.jpg" onerror="this.src='/files/img/default.png'" alt=""/>
+                    </div>
+                </a>
+                <a href="https://www.tenmanga.com/book/Leveling+My+Husband+To+The+Max.html" alt="Leveling My Husband To The Max" title="Leveling My Husband To The Max">
+                    <div class="book-name">Leveling My Husband To The Max</div>
+                </a>
+                <div class="cate-ls">
+                                                            <a href="https://www.tenmanga.com/category/drama.html" alt="drama"><div class="cate-item">drama</div></a>
+                                                                                <a href="https://www.tenmanga.com/category/fantasy.html" alt="fantasy"><div class="cate-item">fantasy</div></a>
+                                                                                                </div>
+                <a href="https://www.tenmanga.com/chapter/LevelingMyHusbandtotheMaxChapter88/8572324/" alt="Leveling My Husband to the Max Chapter 88" title="Leveling My Husband to the Max Chapter 88">
+                <div class="book-chp-info">
+                    <div class="book-chp">Leveling My Husband to the Max Chapter 88</div>
+                    <span class="book-time">11 mins ago</span>
+                </div>
+            </a>
+            </div>
+        </div>
+                <div class="book-item">
+            <div class="book-inner-box">
+                <a href="https://www.tenmanga.com/book/Past+Life+Returner.html" alt="Past Life Returner" title="Past Life Returner">
+                    <div class="book-img">
+                        <img src="/files/img/default.png" class="lazy-img" lazy_url="https://ta1.yx247.com/files/img/logo/202212/202212071245179309.jpg" onerror="this.src='/files/img/default.png'" alt=""/>
+                    </div>
+                </a>
+                <a href="https://www.tenmanga.com/book/Past+Life+Returner.html" alt="Past Life Returner" title="Past Life Returner">
+                    <div class="book-name">Past Life Returner</div>
+                </a>
+                <div class="cate-ls">
+                                                            <a href="https://www.tenmanga.com/category/action.html" alt="action"><div class="cate-item">action</div></a>
+                                                                                <a href="https://www.tenmanga.com/category/adventure.html" alt="adventure"><div class="cate-item">adventure</div></a>
+                                                                                                </div>
+                <a href="https://www.tenmanga.com/chapter/PastLifeReturnerChapter41/8572323/" alt="Past Life Returner Chapter 41" title="Past Life Returner Chapter 41">
+                <div class="book-chp-info">
+                    <div class="book-chp">Past Life Returner Chapter 41</div>
+                    <span class="book-time">11 mins ago</span>
+                </div>
+            </a>
+            </div>
+        </div>
+                <div class="book-item">
+            <div class="book-inner-box">
+                <a href="https://www.tenmanga.com/book/Take+Me.html" alt="Take Me" title="Take Me">
+                    <div class="book-img">
+                        <img src="/files/img/default.png" class="lazy-img" lazy_url="https://ta1.yx247.com/files/img/logo/201908/201908100941097130.jpg" onerror="this.src='/files/img/default.png'" alt=""/>
+                    </div>
+                </a>
+                <a href="https://www.tenmanga.com/book/Take+Me.html" alt="Take Me" title="Take Me">
+                    <div class="book-name">Take Me</div>
+                </a>
+                <div class="cate-ls">
+                                                            <a href="https://www.tenmanga.com/category/comedy.html" alt="comedy"><div class="cate-item">comedy</div></a>
+                                                                                <a href="https://www.tenmanga.com/category/drama.html" alt="drama"><div class="cate-item">drama</div></a>
+                                                                                                                                                                                </div>
+                <a href="https://www.tenmanga.com/chapter/TakeMeChapter107/8572301/" alt="Take Me Chapter 107" title="Take Me Chapter 107">
+                <div class="book-chp-info">
+                    <div class="book-chp">Take Me Chapter 107</div>
+                    <span class="book-time">13 mins ago</span>
+                </div>
+            </a>
+            </div>
+        </div>
+                <div class="book-item">
+            <div class="book-inner-box">
+                <a href="https://www.tenmanga.com/book/I+Tamed+My+Ex-Husband%27s+Mad+Dog.html" alt="I Tamed My Ex-Husband's Mad Dog" title="I Tamed My Ex-Husband's Mad Dog">
+                    <div class="book-img">
+                        <img src="/files/img/default.png" class="lazy-img" lazy_url="https://ta1.yx247.com/files/img/logo/202212/202212230355521985.jpg" onerror="this.src='/files/img/default.png'" alt=""/>
+                    </div>
+                </a>
+                <a href="https://www.tenmanga.com/book/I+Tamed+My+Ex-Husband%27s+Mad+Dog.html" alt="I Tamed My Ex-Husband's Mad Dog" title="I Tamed My Ex-Husband's Mad Dog">
+                    <div class="book-name">I Tamed My Ex-Husband's Mad Dog</div>
+                </a>
+                <div class="cate-ls">
+                                                            <a href="https://www.tenmanga.com/category/fantasy.html" alt="fantasy"><div class="cate-item">fantasy</div></a>
+                                                                                <a href="https://www.tenmanga.com/category/romance.html" alt="romance"><div class="cate-item">romance</div></a>
+                                                        </div>
+                <a href="https://www.tenmanga.com/chapter/ITamedMyExHusband039sMadDogChapter27/8572293/" alt="I Tamed My Ex-Husband&#039;s Mad Dog Chapter 27" title="I Tamed My Ex-Husband&#039;s Mad Dog Chapter 27">
+                <div class="book-chp-info">
+                    <div class="book-chp">I Tamed My Ex-Husband&#039;s Mad Dog Chapter 27</div>
+                    <span class="book-time">13 mins ago</span>
+                </div>
+            </a>
+            </div>
+        </div>
+            </div>
+</div>
+<!--Hot Updated-->
+<div class="page-sec">
+    <div class="sec-title">Featured Recently<a href="https://www.tenmanga.com/list/Hot-Book/" title=""><div class="more-btn">More <span class="ifont-arrow-right"></span></div></a></div>
+    <div class="book-ls bk-ls-one-sec">
+        <div class="book-item-place"></div>
+        <div class="book-item-place"></div>
+        <div class="book-item-place"></div>
+                        <div class="bk-ls-one">
+            <div class="bk-ls-bg" style="background-image: url('https://ta1.yx247.com/files/img/logo/201503/201503220937015737.jpg');"></div>
+            <div class="book-item" >
+                <table>
+                    <tr>
+                        <td>
+                            <a href="https://www.tenmanga.com/book/TENKUU+SHINPAN.html" alt="TENKUU SHINPAN" title="TENKUU SHINPAN">
+                                <div class="book-img">
+                                    <img src="/files/img/default.png" class="lazy-img" lazy_url="https://ta1.yx247.com/files/img/logo/201503/201503220937015737.jpg" onerror="this.src='/files/img/default.png'" alt=""/>
+                                </div>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="https://www.tenmanga.com/book/TENKUU+SHINPAN.html" alt="TENKUU SHINPAN" title="TENKUU SHINPAN">
+                                <div class="book-name">TENKUU SHINPAN</div>
+                            </a>
+                            <div class="book-summary">High-school girl Yuri suddenly finds herself on the rooftop of a high-rise building.
+She's trapped in a bizarre world surrounded by skyscrapers, where a masked man cracked open a man's head with an axe before her eyes.
+
+The original author of 'Ajin', Tsuina Miura works in collaboration with Takahiro Oba, the artist of 'Box!', to bring you this thrilling skyscraper suspense!</div>
+                            <a href="https://www.tenmanga.com/chapter/TenkuuShinpanCh259SpecialEdition/1695562/" alt="Tenkuu Shinpan Ch. 259 Special Edition" title="Tenkuu Shinpan Ch. 259 Special Edition">
+                                <div class="book-chp-info">
+                                    <div class="book-chp">Tenkuu Shinpan Ch. 259 Special Edition</div>
+                                    <span class="book-time">2019-11-28</span>
+                                </div>
+                            </a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+                <div class="book-item">
+            <div class="book-inner-box">
+                <a href="https://www.tenmanga.com/book/TENKUU+SHINPAN.html" alt="TENKUU SHINPAN" title="TENKUU SHINPAN">
+                    <div class="book-img">
+                        <img src="/files/img/default.png" class="lazy-img" lazy_url="https://ta1.yx247.com/files/img/logo/201503/201503220937015737.jpg" onerror="this.src='/files/img/default.png'" alt=""/>
+                    </div>
+                </a>
+
+                <a href="https://www.tenmanga.com/book/TENKUU+SHINPAN.html" alt="TENKUU SHINPAN" title="TENKUU SHINPAN">
+                    <div class="book-name">TENKUU SHINPAN</div>
+                </a>
+                <div class="cate-ls">
+                                                            <a href="https://www.tenmanga.com/category/action.html" alt="action"><div class="cate-item">action</div></a>
+                                                                                <a href="https://www.tenmanga.com/category/horror.html" alt="horror"><div class="cate-item">horror</div></a>
+                                                                                                                                                                                </div>
+                <a href="https://www.tenmanga.com/chapter/TenkuuShinpanCh259SpecialEdition/1695562/" alt="Tenkuu Shinpan Ch. 259 Special Edition" title="Tenkuu Shinpan Ch. 259 Special Edition">
+                <div class="book-chp-info">
+                    <div class="book-chp">Tenkuu Shinpan Ch. 259 Special Edition</div>
+                    <span class="book-time">2019-11-28</span>
+                </div>
+            </a>
+            </div>
+        </div>
+                        <div class="book-item">
+            <div class="book-inner-box">
+                <a href="https://www.tenmanga.com/book/Girl+the+Wild%27s.html" alt="Girl the Wild's" title="Girl the Wild's">
+                    <div class="book-img">
+                        <img src="/files/img/default.png" class="lazy-img" lazy_url="https://ta1.yx247.com/files/img/logo/201507/201507061906316508.jpg" onerror="this.src='/files/img/default.png'" alt=""/>
+                    </div>
+                </a>
+
+                <a href="https://www.tenmanga.com/book/Girl+the+Wild%27s.html" alt="Girl the Wild's" title="Girl the Wild's">
+                    <div class="book-name">Girl the Wild's</div>
+                </a>
+                <div class="cate-ls">
+                                                            <a href="https://www.tenmanga.com/category/action.html" alt="action"><div class="cate-item">action</div></a>
+                                                                                <a href="https://www.tenmanga.com/category/comedy.html" alt="comedy"><div class="cate-item">comedy</div></a>
+                                                                                                                                                                                                                                                                                                                                                </div>
+                <a href="https://www.tenmanga.com/chapter/GirltheWilds260/822401/" alt="Girl the Wild's 260" title="Girl the Wild's 260">
+                <div class="book-chp-info">
+                    <div class="book-chp">Girl the Wild's 260</div>
+                    <span class="book-time">2016-10-30</span>
+                </div>
+            </a>
+            </div>
+        </div>
+                        <div class="book-item">
+            <div class="book-inner-box">
+                <a href="https://www.tenmanga.com/book/Tokyo+Ghoul%3Are.html" alt="Tokyo Ghoul:re" title="Tokyo Ghoul:re">
+                    <div class="book-img">
+                        <img src="/files/img/default.png" class="lazy-img" lazy_url="https://ta1.yx247.com/files/img/logo/201503/201503220934231205.jpg" onerror="this.src='/files/img/default.png'" alt=""/>
+                    </div>
+                </a>
+
+                <a href="https://www.tenmanga.com/book/Tokyo+Ghoul%3Are.html" alt="Tokyo Ghoul:re" title="Tokyo Ghoul:re">
+                    <div class="book-name">Tokyo Ghoul:re</div>
+                </a>
+                <div class="cate-ls">
+                                                            <a href="https://www.tenmanga.com/category/action.html" alt="action"><div class="cate-item">action</div></a>
+                                                                                <a href="https://www.tenmanga.com/category/drama.html" alt="drama"><div class="cate-item">drama</div></a>
+                                                                                                                                                                                                                                                                                                                                                </div>
+                <a href="https://www.tenmanga.com/chapter/TokyoGhoulre179/1025625/" alt="Tokyo Ghoul:re 179" title="Tokyo Ghoul:re 179">
+                <div class="book-chp-info">
+                    <div class="book-chp">Tokyo Ghoul:re 179</div>
+                    <span class="book-time">2018-07-02</span>
+                </div>
+            </a>
+            </div>
+        </div>
+                        <div class="book-item">
+            <div class="book-inner-box">
+                <a href="https://www.tenmanga.com/book/Soul+Cartel.html" alt="Soul Cartel" title="Soul Cartel">
+                    <div class="book-img">
+                        <img src="/files/img/default.png" class="lazy-img" lazy_url="https://ta1.yx247.com/files/img/logo/201503/201503220933559992.jpg" onerror="this.src='/files/img/default.png'" alt=""/>
+                    </div>
+                </a>
+
+                <a href="https://www.tenmanga.com/book/Soul+Cartel.html" alt="Soul Cartel" title="Soul Cartel">
+                    <div class="book-name">Soul Cartel</div>
+                </a>
+                <div class="cate-ls">
+                                                            <a href="https://www.tenmanga.com/category/action.html" alt="action"><div class="cate-item">action</div></a>
+                                                                                <a href="https://www.tenmanga.com/category/adventure.html" alt="adventure"><div class="cate-item">adventure</div></a>
+                                                                                                                                                                                                                        </div>
+                <a href="https://www.tenmanga.com/chapter/SoulCartel1895/957945/" alt="Soul Cartel 189.5" title="Soul Cartel 189.5">
+                <div class="book-chp-info">
+                    <div class="book-chp">Soul Cartel 189.5</div>
+                    <span class="book-time">2018-01-21</span>
+                </div>
+            </a>
+            </div>
+        </div>
+                        <div class="book-item">
+            <div class="book-inner-box">
+                <a href="https://www.tenmanga.com/book/SHISHUNKI+NA+ADAM.html" alt="SHISHUNKI NA ADAM" title="SHISHUNKI NA ADAM">
+                    <div class="book-img">
+                        <img src="/files/img/default.png" class="lazy-img" lazy_url="https://ta1.yx247.com/files/img/logo/201503/201503220939386192.jpg" onerror="this.src='/files/img/default.png'" alt=""/>
+                    </div>
+                </a>
+
+                <a href="https://www.tenmanga.com/book/SHISHUNKI+NA+ADAM.html" alt="SHISHUNKI NA ADAM" title="SHISHUNKI NA ADAM">
+                    <div class="book-name">SHISHUNKI NA ADAM</div>
+                </a>
+                <div class="cate-ls">
+                                                            <a href="https://www.tenmanga.com/category/ecchi.html" alt="ecchi"><div class="cate-item">ecchi</div></a>
+                                                                                <a href="https://www.tenmanga.com/category/seinen.html" alt="seinen"><div class="cate-item">seinen</div></a>
+                                                                                                </div>
+                <a href="https://www.tenmanga.com/chapter/ShishunkinaAdam31/8568970/" alt="Shishunki na Adam 31" title="Shishunki na Adam 31">
+                <div class="book-chp-info">
+                    <div class="book-chp">Shishunki na Adam 31</div>
+                    <span class="book-time">2023-05-16</span>
+                </div>
+            </a>
+            </div>
+        </div>
+                        <div class="book-item">
+            <div class="book-inner-box">
+                <a href="https://www.tenmanga.com/book/HAIKYUU%21%21.html" alt="HAIKYUU!!" title="HAIKYUU!!">
+                    <div class="book-img">
+                        <img src="/files/img/default.png" class="lazy-img" lazy_url="https://ta1.yx247.com/files/img/logo/201503/201503220939321529.jpg" onerror="this.src='/files/img/default.png'" alt=""/>
+                    </div>
+                </a>
+
+                <a href="https://www.tenmanga.com/book/HAIKYUU%21%21.html" alt="HAIKYUU!!" title="HAIKYUU!!">
+                    <div class="book-name">HAIKYUU!!</div>
+                </a>
+                <div class="cate-ls">
+                                                            <a href="https://www.tenmanga.com/category/shounen.html" alt="shounen"><div class="cate-item">shounen</div></a>
+                                                                                <a href="https://www.tenmanga.com/category/sports.html" alt="sports"><div class="cate-item">sports</div></a>
+                                                        </div>
+                <a href="https://www.tenmanga.com/chapter/HaikyuuChapter4025/6467182/" alt="Haikyuu!! Chapter 402.5" title="Haikyuu!! Chapter 402.5">
+                <div class="book-chp-info">
+                    <div class="book-chp">Haikyuu!! Chapter 402.5</div>
+                    <span class="book-time">2022-04-25</span>
+                </div>
+            </a>
+            </div>
+        </div>
+            </div>
+</div>
+<!--rank-->
+<div class="page-sec book-rank-ls">
+    <!--today-->
+    <div class="book-rank">
+        <div class="book-rank-title">Most Viewed Daily</div>
+                <div class="book-rank-item">
+            <table cellspacing="0" cellpadding="0">
+                <tr>
+                    <td>
+                        <a href="https://www.tenmanga.com/book/Cultivator+Against+Hero+Society.html" alt="Cultivator Against Hero Society" title="Cultivator Against Hero Society">
+                            <div class="book-img">
+                                <img src="/files/img/default.png" class="lazy-img" lazy_url="https://ta1.yx247.com/files/img/logo/202006/202006140633099667.jpg" onerror="this.src='/files/img/default.png'" alt=""/>
+                            </div>
+                        </a>
+                    </td>
+                    <td class="book-rank-idx">1</td>
+                    <td class="book-rank-info">
+                        <a href="https://www.tenmanga.com/book/Cultivator+Against+Hero+Society.html" alt="Cultivator Against Hero Society" title="Cultivator Against Hero Society">
+                            <div class="book-name">Cultivator Against Hero Society</div>
+                        </a>
+                        <div class="book-intro"></div>
+                        <div class="book-score">2077 Views</div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+                <div class="book-rank-item">
+            <table cellspacing="0" cellpadding="0">
+                <tr>
+                    <td>
+                        <a href="https://www.tenmanga.com/book/Raise+wa+Tanin+ga+Ii.html" alt="Raise wa Tanin ga Ii" title="Raise wa Tanin ga Ii">
+                            <div class="book-img">
+                                <img src="/files/img/default.png" class="lazy-img" lazy_url="https://ta1.yx247.com/files/img/logo/201712/201712082031591737.jpg" onerror="this.src='/files/img/default.png'" alt=""/>
+                            </div>
+                        </a>
+                    </td>
+                    <td class="book-rank-idx">2</td>
+                    <td class="book-rank-info">
+                        <a href="https://www.tenmanga.com/book/Raise+wa+Tanin+ga+Ii.html" alt="Raise wa Tanin ga Ii" title="Raise wa Tanin ga Ii">
+                            <div class="book-name">Raise wa Tanin ga Ii</div>
+                        </a>
+                        <div class="book-intro"></div>
+                        <div class="book-score">1985 Views</div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+                <div class="book-rank-item">
+            <table cellspacing="0" cellpadding="0">
+                <tr>
+                    <td>
+                        <a href="https://www.tenmanga.com/book/The+Demon+King+Who+Lost+His+Job.html" alt="The Demon King Who Lost His Job" title="The Demon King Who Lost His Job">
+                            <div class="book-img">
+                                <img src="/files/img/default.png" class="lazy-img" lazy_url="https://ta1.yx247.com/files/img/logo/201907/201907230451407186.jpg" onerror="this.src='/files/img/default.png'" alt=""/>
+                            </div>
+                        </a>
+                    </td>
+                    <td class="book-rank-idx">3</td>
+                    <td class="book-rank-info">
+                        <a href="https://www.tenmanga.com/book/The+Demon+King+Who+Lost+His+Job.html" alt="The Demon King Who Lost His Job" title="The Demon King Who Lost His Job">
+                            <div class="book-name">The Demon King Who Lost His Job</div>
+                        </a>
+                        <div class="book-intro"></div>
+                        <div class="book-score">1908 Views</div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+                <div class="book-rank-item">
+            <table cellspacing="0" cellpadding="0">
+                <tr>
+                    <td>
+                        <a href="https://www.tenmanga.com/book/Strongest+Leveling.html" alt="Strongest Leveling" title="Strongest Leveling">
+                            <div class="book-img">
+                                <img src="/files/img/default.png" class="lazy-img" lazy_url="https://ta1.yx247.com/files/img/logo/201909/201909171430313112.jpg" onerror="this.src='/files/img/default.png'" alt=""/>
+                            </div>
+                        </a>
+                    </td>
+                    <td class="book-rank-idx">4</td>
+                    <td class="book-rank-info">
+                        <a href="https://www.tenmanga.com/book/Strongest+Leveling.html" alt="Strongest Leveling" title="Strongest Leveling">
+                            <div class="book-name">Strongest Leveling</div>
+                        </a>
+                        <div class="book-intro"></div>
+                        <div class="book-score">1835 Views</div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+                <div class="book-rank-item">
+            <table cellspacing="0" cellpadding="0">
+                <tr>
+                    <td>
+                        <a href="https://www.tenmanga.com/book/Murim+Login.html" alt="Murim Login" title="Murim Login">
+                            <div class="book-img">
+                                <img src="/files/img/default.png" class="lazy-img" lazy_url="https://ta1.yx247.com/files/img/logo/202005/202005101556275235.jpg" onerror="this.src='/files/img/default.png'" alt=""/>
+                            </div>
+                        </a>
+                    </td>
+                    <td class="book-rank-idx">5</td>
+                    <td class="book-rank-info">
+                        <a href="https://www.tenmanga.com/book/Murim+Login.html" alt="Murim Login" title="Murim Login">
+                            <div class="book-name">Murim Login</div>
+                        </a>
+                        <div class="book-intro"></div>
+                        <div class="book-score">1829 Views</div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+                <div class="book-rank-item">
+            <table cellspacing="0" cellpadding="0">
+                <tr>
+                    <td>
+                        <a href="https://www.tenmanga.com/book/Global+Martial+Arts.html" alt="Global Martial Arts" title="Global Martial Arts">
+                            <div class="book-img">
+                                <img src="/files/img/default.png" class="lazy-img" lazy_url="https://ta1.yx247.com/files/img/logo/202003/202003270910401196.jpg" onerror="this.src='/files/img/default.png'" alt=""/>
+                            </div>
+                        </a>
+                    </td>
+                    <td class="book-rank-idx">6</td>
+                    <td class="book-rank-info">
+                        <a href="https://www.tenmanga.com/book/Global+Martial+Arts.html" alt="Global Martial Arts" title="Global Martial Arts">
+                            <div class="book-name">Global Martial Arts</div>
+                        </a>
+                        <div class="book-intro"></div>
+                        <div class="book-score">1781 Views</div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+                <div class="book-rank-item">
+            <table cellspacing="0" cellpadding="0">
+                <tr>
+                    <td>
+                        <a href="https://www.tenmanga.com/book/A+Stepmother%27s+Marchen.html" alt="A Stepmother's Marchen" title="A Stepmother's Marchen">
+                            <div class="book-img">
+                                <img src="/files/img/default.png" class="lazy-img" lazy_url="https://ta1.yx247.com/files/img/logo/201909/201909180541173470.jpg" onerror="this.src='/files/img/default.png'" alt=""/>
+                            </div>
+                        </a>
+                    </td>
+                    <td class="book-rank-idx">7</td>
+                    <td class="book-rank-info">
+                        <a href="https://www.tenmanga.com/book/A+Stepmother%27s+Marchen.html" alt="A Stepmother's Marchen" title="A Stepmother's Marchen">
+                            <div class="book-name">A Stepmother's Marchen</div>
+                        </a>
+                        <div class="book-intro"></div>
+                        <div class="book-score">1780 Views</div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+                <div class="book-rank-item">
+            <table cellspacing="0" cellpadding="0">
+                <tr>
+                    <td>
+                        <a href="https://www.tenmanga.com/book/That+Inferior+Knight%2C+Actually+Level+999.html" alt="That Inferior Knight, Actually Level 999" title="That Inferior Knight, Actually Level 999">
+                            <div class="book-img">
+                                <img src="/files/img/default.png" class="lazy-img" lazy_url="https://ta1.yx247.com/files/img/logo/201907/201907072000401171.jpg" onerror="this.src='/files/img/default.png'" alt=""/>
+                            </div>
+                        </a>
+                    </td>
+                    <td class="book-rank-idx">8</td>
+                    <td class="book-rank-info">
+                        <a href="https://www.tenmanga.com/book/That+Inferior+Knight%2C+Actually+Level+999.html" alt="That Inferior Knight, Actually Level 999" title="That Inferior Knight, Actually Level 999">
+                            <div class="book-name">That Inferior Knight, Actually Level 999</div>
+                        </a>
+                        <div class="book-intro"></div>
+                        <div class="book-score">1730 Views</div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+                <div class="book-rank-item">
+            <table cellspacing="0" cellpadding="0">
+                <tr>
+                    <td>
+                        <a href="https://www.tenmanga.com/book/The+Max+Level+Hero+has+Returned%21.html" alt="The Max Level Hero has Returned!" title="The Max Level Hero has Returned!">
+                            <div class="book-img">
+                                <img src="/files/img/default.png" class="lazy-img" lazy_url="https://ta1.yx247.com/files/img/logo/202010/202010262013114515.png" onerror="this.src='/files/img/default.png'" alt=""/>
+                            </div>
+                        </a>
+                    </td>
+                    <td class="book-rank-idx">9</td>
+                    <td class="book-rank-info">
+                        <a href="https://www.tenmanga.com/book/The+Max+Level+Hero+has+Returned%21.html" alt="The Max Level Hero has Returned!" title="The Max Level Hero has Returned!">
+                            <div class="book-name">The Max Level Hero has Returned!</div>
+                        </a>
+                        <div class="book-intro"></div>
+                        <div class="book-score">1699 Views</div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+                <div class="book-rank-item">
+            <table cellspacing="0" cellpadding="0">
+                <tr>
+                    <td>
+                        <a href="https://www.tenmanga.com/book/Soredemo+Ayumu+wa+Yosetekuru.html" alt="Soredemo Ayumu wa Yosetekuru" title="Soredemo Ayumu wa Yosetekuru">
+                            <div class="book-img">
+                                <img src="/files/img/default.png" class="lazy-img" lazy_url="https://ta1.yx247.com/files/img/logo/201903/201903061610295286.jpg" onerror="this.src='/files/img/default.png'" alt=""/>
+                            </div>
+                        </a>
+                    </td>
+                    <td class="book-rank-idx">10</td>
+                    <td class="book-rank-info">
+                        <a href="https://www.tenmanga.com/book/Soredemo+Ayumu+wa+Yosetekuru.html" alt="Soredemo Ayumu wa Yosetekuru" title="Soredemo Ayumu wa Yosetekuru">
+                            <div class="book-name">Soredemo Ayumu wa Yosetekuru</div>
+                        </a>
+                        <div class="book-intro"></div>
+                        <div class="book-score">1673 Views</div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+            </div>
+    <!--week-->
+    <div class="book-rank">
+        <div class="book-rank-title">Most Viewed Weekly</div>
+                <div class="book-rank-item">
+            <table cellspacing="0" cellpadding="0">
+                <tr>
+                    <td>
+                        <a href="https://www.tenmanga.com/book/Apotheosis.html" alt="Apotheosis" title="Apotheosis">
+                            <div class="book-img">
+                                <img src="/files/img/default.png" class="lazy-img" lazy_url="https://ta1.yx247.com/files/img/logo/201801/201801242250149273.jpg" onerror="this.src='/files/img/default.png'" alt=""/>
+                            </div>
+                        </a>
+                    </td>
+                    <td class="book-rank-idx">1</td>
+                    <td class="book-rank-info">
+                        <a href="https://www.tenmanga.com/book/Apotheosis.html" alt="Apotheosis" title="Apotheosis">
+                            <div class="book-name">Apotheosis</div>
+                        </a>
+                        <div class="book-score">312967 Views</div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+                <div class="book-rank-item">
+            <table cellspacing="0" cellpadding="0">
+                <tr>
+                    <td>
+                        <a href="https://www.tenmanga.com/book/Martial+Arts+Reigns.html" alt="Martial Arts Reigns" title="Martial Arts Reigns">
+                            <div class="book-img">
+                                <img src="/files/img/default.png" class="lazy-img" lazy_url="https://ta1.yx247.com/files/img/logo/201909/201909112130374929.jpg" onerror="this.src='/files/img/default.png'" alt=""/>
+                            </div>
+                        </a>
+                    </td>
+                    <td class="book-rank-idx">2</td>
+                    <td class="book-rank-info">
+                        <a href="https://www.tenmanga.com/book/Martial+Arts+Reigns.html" alt="Martial Arts Reigns" title="Martial Arts Reigns">
+                            <div class="book-name">Martial Arts Reigns</div>
+                        </a>
+                        <div class="book-score">280137 Views</div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+                <div class="book-rank-item">
+            <table cellspacing="0" cellpadding="0">
+                <tr>
+                    <td>
+                        <a href="https://www.tenmanga.com/book/SHISHUNKI+NA+ADAM.html" alt="SHISHUNKI NA ADAM" title="SHISHUNKI NA ADAM">
+                            <div class="book-img">
+                                <img src="/files/img/default.png" class="lazy-img" lazy_url="https://ta1.yx247.com/files/img/logo/201503/201503220939386192.jpg" onerror="this.src='/files/img/default.png'" alt=""/>
+                            </div>
+                        </a>
+                    </td>
+                    <td class="book-rank-idx">3</td>
+                    <td class="book-rank-info">
+                        <a href="https://www.tenmanga.com/book/SHISHUNKI+NA+ADAM.html" alt="SHISHUNKI NA ADAM" title="SHISHUNKI NA ADAM">
+                            <div class="book-name">SHISHUNKI NA ADAM</div>
+                        </a>
+                        <div class="book-score">212580 Views</div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+                <div class="book-rank-item">
+            <table cellspacing="0" cellpadding="0">
+                <tr>
+                    <td>
+                        <a href="https://www.tenmanga.com/book/TOWER+OF+GOD.html" alt="TOWER OF GOD" title="TOWER OF GOD">
+                            <div class="book-img">
+                                <img src="/files/img/default.png" class="lazy-img" lazy_url="https://ta1.yx247.com/files/img/logo/201505/201505112342049762.jpg" onerror="this.src='/files/img/default.png'" alt=""/>
+                            </div>
+                        </a>
+                    </td>
+                    <td class="book-rank-idx">4</td>
+                    <td class="book-rank-info">
+                        <a href="https://www.tenmanga.com/book/TOWER+OF+GOD.html" alt="TOWER OF GOD" title="TOWER OF GOD">
+                            <div class="book-name">TOWER OF GOD</div>
+                        </a>
+                        <div class="book-score">205143 Views</div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+                <div class="book-rank-item">
+            <table cellspacing="0" cellpadding="0">
+                <tr>
+                    <td>
+                        <a href="https://www.tenmanga.com/book/A+Returner%27s+Magic+Should+Be+Special.html" alt="A Returner's Magic Should Be Special" title="A Returner's Magic Should Be Special">
+                            <div class="book-img">
+                                <img src="/files/img/default.png" class="lazy-img" lazy_url="https://ta1.yx247.com/files/img/logo/201811/201811080531476682.png" onerror="this.src='/files/img/default.png'" alt=""/>
+                            </div>
+                        </a>
+                    </td>
+                    <td class="book-rank-idx">5</td>
+                    <td class="book-rank-info">
+                        <a href="https://www.tenmanga.com/book/A+Returner%27s+Magic+Should+Be+Special.html" alt="A Returner's Magic Should Be Special" title="A Returner's Magic Should Be Special">
+                            <div class="book-name">A Returner's Magic Should Be Special</div>
+                        </a>
+                        <div class="book-score">182217 Views</div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+                <div class="book-rank-item">
+            <table cellspacing="0" cellpadding="0">
+                <tr>
+                    <td>
+                        <a href="https://www.tenmanga.com/book/DOULUO+DALU+II+-+JUESHUI+TANGMEN.html" alt="DOULUO DALU II - JUESHUI TANGMEN" title="DOULUO DALU II - JUESHUI TANGMEN">
+                            <div class="book-img">
+                                <img src="/files/img/default.png" class="lazy-img" lazy_url="https://ta1.yx247.com/files/img/logo/201603/201603151306513791.jpg" onerror="this.src='/files/img/default.png'" alt=""/>
+                            </div>
+                        </a>
+                    </td>
+                    <td class="book-rank-idx">6</td>
+                    <td class="book-rank-info">
+                        <a href="https://www.tenmanga.com/book/DOULUO+DALU+II+-+JUESHUI+TANGMEN.html" alt="DOULUO DALU II - JUESHUI TANGMEN" title="DOULUO DALU II - JUESHUI TANGMEN">
+                            <div class="book-name">DOULUO DALU II - JUESHUI TANGMEN</div>
+                        </a>
+                        <div class="book-score">179450 Views</div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+                <div class="book-rank-item">
+            <table cellspacing="0" cellpadding="0">
+                <tr>
+                    <td>
+                        <a href="https://www.tenmanga.com/book/God+of+Martial+Arts.html" alt="God of Martial Arts" title="God of Martial Arts">
+                            <div class="book-img">
+                                <img src="/files/img/default.png" class="lazy-img" lazy_url="https://ta1.yx247.com/files/img/logo/201712/201712042334241857.jpg" onerror="this.src='/files/img/default.png'" alt=""/>
+                            </div>
+                        </a>
+                    </td>
+                    <td class="book-rank-idx">7</td>
+                    <td class="book-rank-info">
+                        <a href="https://www.tenmanga.com/book/God+of+Martial+Arts.html" alt="God of Martial Arts" title="God of Martial Arts">
+                            <div class="book-name">God of Martial Arts</div>
+                        </a>
+                        <div class="book-score">162017 Views</div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+                <div class="book-rank-item">
+            <table cellspacing="0" cellpadding="0">
+                <tr>
+                    <td>
+                        <a href="https://www.tenmanga.com/book/SENSE.html" alt="SENSE" title="SENSE">
+                            <div class="book-img">
+                                <img src="/files/img/default.png" class="lazy-img" lazy_url="https://ta1.yx247.com/files/img/logo/201503/201503220347327835.jpg" onerror="this.src='/files/img/default.png'" alt=""/>
+                            </div>
+                        </a>
+                    </td>
+                    <td class="book-rank-idx">8</td>
+                    <td class="book-rank-info">
+                        <a href="https://www.tenmanga.com/book/SENSE.html" alt="SENSE" title="SENSE">
+                            <div class="book-name">SENSE</div>
+                        </a>
+                        <div class="book-score">145309 Views</div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+                <div class="book-rank-item">
+            <table cellspacing="0" cellpadding="0">
+                <tr>
+                    <td>
+                        <a href="https://www.tenmanga.com/book/MARTIAL+PEAK.html" alt="MARTIAL PEAK" title="MARTIAL PEAK">
+                            <div class="book-img">
+                                <img src="/files/img/default.png" class="lazy-img" lazy_url="https://ta1.yx247.com/files/img/logo/201805/201805272240119822.jpg" onerror="this.src='/files/img/default.png'" alt=""/>
+                            </div>
+                        </a>
+                    </td>
+                    <td class="book-rank-idx">9</td>
+                    <td class="book-rank-info">
+                        <a href="https://www.tenmanga.com/book/MARTIAL+PEAK.html" alt="MARTIAL PEAK" title="MARTIAL PEAK">
+                            <div class="book-name">MARTIAL PEAK</div>
+                        </a>
+                        <div class="book-score">119496 Views</div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+                <div class="book-rank-item">
+            <table cellspacing="0" cellpadding="0">
+                <tr>
+                    <td>
+                        <a href="https://www.tenmanga.com/book/Isekai+Nonbiri+Nouka.html" alt="Isekai Nonbiri Nouka" title="Isekai Nonbiri Nouka">
+                            <div class="book-img">
+                                <img src="/files/img/default.png" class="lazy-img" lazy_url="https://ta1.yx247.com/files/img/logo/201710/201710271630225868.jpg" onerror="this.src='/files/img/default.png'" alt=""/>
+                            </div>
+                        </a>
+                    </td>
+                    <td class="book-rank-idx">10</td>
+                    <td class="book-rank-info">
+                        <a href="https://www.tenmanga.com/book/Isekai+Nonbiri+Nouka.html" alt="Isekai Nonbiri Nouka" title="Isekai Nonbiri Nouka">
+                            <div class="book-name">Isekai Nonbiri Nouka</div>
+                        </a>
+                        <div class="book-score">105508 Views</div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+            </div>
+    <!--month-->
+    <div class="book-rank">
+        <div class="book-rank-title">Most Viewed Monthly</div>
+                <div class="book-rank-item">
+            <table cellspacing="0" cellpadding="0">
+                <tr>
+                    <td>
+                        <a href="https://www.tenmanga.com/book/One+Piece.html" alt="One Piece" title="One Piece">
+                            <div class="book-img">
+                                <img src="/files/img/default.png" class="lazy-img" lazy_url="https://ta1.yx247.com/files/img/logo/201503/201503220937527222.jpg" onerror="this.src='/files/img/default.png'" alt=""/>
+                            </div>
+                        </a>
+                    </td>
+                    <td class="book-rank-idx">1</td>
+                    <td class="book-rank-info">
+                        <a href="https://www.tenmanga.com/book/One+Piece.html" alt="One Piece" title="One Piece">
+                            <div class="book-name">One Piece</div>
+                        </a>
+                        <div class="book-score">3641815 Views</div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+                <div class="book-rank-item">
+            <table cellspacing="0" cellpadding="0">
+                <tr>
+                    <td>
+                        <a href="https://www.tenmanga.com/book/Solo+Leveling.html" alt="Solo Leveling" title="Solo Leveling">
+                            <div class="book-img">
+                                <img src="/files/img/default.png" class="lazy-img" lazy_url="https://ta1.yx247.com/files/img/logo/201811/201811042040243359.jpg" onerror="this.src='/files/img/default.png'" alt=""/>
+                            </div>
+                        </a>
+                    </td>
+                    <td class="book-rank-idx">2</td>
+                    <td class="book-rank-info">
+                        <a href="https://www.tenmanga.com/book/Solo+Leveling.html" alt="Solo Leveling" title="Solo Leveling">
+                            <div class="book-name">Solo Leveling</div>
+                        </a>
+                        <div class="book-score">1835801 Views</div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+                <div class="book-rank-item">
+            <table cellspacing="0" cellpadding="0">
+                <tr>
+                    <td>
+                        <a href="https://www.tenmanga.com/book/RULER+OF+THE+LAND.html" alt="RULER OF THE LAND" title="RULER OF THE LAND">
+                            <div class="book-img">
+                                <img src="/files/img/default.png" class="lazy-img" lazy_url="https://ta1.yx247.com/files/img/logo/201503/201503220938509575.jpg" onerror="this.src='/files/img/default.png'" alt=""/>
+                            </div>
+                        </a>
+                    </td>
+                    <td class="book-rank-idx">3</td>
+                    <td class="book-rank-info">
+                        <a href="https://www.tenmanga.com/book/RULER+OF+THE+LAND.html" alt="RULER OF THE LAND" title="RULER OF THE LAND">
+                            <div class="book-name">RULER OF THE LAND</div>
+                        </a>
+                        <div class="book-score">1701423 Views</div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+                <div class="book-rank-item">
+            <table cellspacing="0" cellpadding="0">
+                <tr>
+                    <td>
+                        <a href="https://www.tenmanga.com/book/Tales+of+Demons+and+Gods.html" alt="Tales of Demons and Gods" title="Tales of Demons and Gods">
+                            <div class="book-img">
+                                <img src="/files/img/default.png" class="lazy-img" lazy_url="https://ta1.yx247.com/files/img/logo/201508/201508111350111481.jpg" onerror="this.src='/files/img/default.png'" alt=""/>
+                            </div>
+                        </a>
+                    </td>
+                    <td class="book-rank-idx">4</td>
+                    <td class="book-rank-info">
+                        <a href="https://www.tenmanga.com/book/Tales+of+Demons+and+Gods.html" alt="Tales of Demons and Gods" title="Tales of Demons and Gods">
+                            <div class="book-name">Tales of Demons and Gods</div>
+                        </a>
+                        <div class="book-score">1575609 Views</div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+                <div class="book-rank-item">
+            <table cellspacing="0" cellpadding="0">
+                <tr>
+                    <td>
+                        <a href="https://www.tenmanga.com/book/Boku+no+Hero+Academia.html" alt="Boku no Hero Academia" title="Boku no Hero Academia">
+                            <div class="book-img">
+                                <img src="/files/img/default.png" class="lazy-img" lazy_url="https://ta1.yx247.com/files/img/logo/201503/201503220939226997.jpg" onerror="this.src='/files/img/default.png'" alt=""/>
+                            </div>
+                        </a>
+                    </td>
+                    <td class="book-rank-idx">5</td>
+                    <td class="book-rank-info">
+                        <a href="https://www.tenmanga.com/book/Boku+no+Hero+Academia.html" alt="Boku no Hero Academia" title="Boku no Hero Academia">
+                            <div class="book-name">Boku no Hero Academia</div>
+                        </a>
+                        <div class="book-score">1182872 Views</div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+                <div class="book-rank-item">
+            <table cellspacing="0" cellpadding="0">
+                <tr>
+                    <td>
+                        <a href="https://www.tenmanga.com/book/KINGDOM.html" alt="KINGDOM" title="KINGDOM">
+                            <div class="book-img">
+                                <img src="/files/img/default.png" class="lazy-img" lazy_url="https://ta1.yx247.com/files/img/logo/201503/201503220939351863.jpg" onerror="this.src='/files/img/default.png'" alt=""/>
+                            </div>
+                        </a>
+                    </td>
+                    <td class="book-rank-idx">6</td>
+                    <td class="book-rank-info">
+                        <a href="https://www.tenmanga.com/book/KINGDOM.html" alt="KINGDOM" title="KINGDOM">
+                            <div class="book-name">KINGDOM</div>
+                        </a>
+                        <div class="book-score">978132 Views</div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+                <div class="book-rank-item">
+            <table cellspacing="0" cellpadding="0">
+                <tr>
+                    <td>
+                        <a href="https://www.tenmanga.com/book/Hajime+no+Ippo.html" alt="Hajime no Ippo" title="Hajime no Ippo">
+                            <div class="book-img">
+                                <img src="/files/img/default.png" class="lazy-img" lazy_url="https://ta1.yx247.com/files/img/logo/201503/201503220921302087.jpg" onerror="this.src='/files/img/default.png'" alt=""/>
+                            </div>
+                        </a>
+                    </td>
+                    <td class="book-rank-idx">7</td>
+                    <td class="book-rank-info">
+                        <a href="https://www.tenmanga.com/book/Hajime+no+Ippo.html" alt="Hajime no Ippo" title="Hajime no Ippo">
+                            <div class="book-name">Hajime no Ippo</div>
+                        </a>
+                        <div class="book-score">819566 Views</div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+                <div class="book-rank-item">
+            <table cellspacing="0" cellpadding="0">
+                <tr>
+                    <td>
+                        <a href="https://www.tenmanga.com/book/Rebirth+of+the+Urban+Immortal+Cultivator.html" alt="Rebirth of the Urban Immortal Cultivator" title="Rebirth of the Urban Immortal Cultivator">
+                            <div class="book-img">
+                                <img src="/files/img/default.png" class="lazy-img" lazy_url="https://ta1.yx247.com/files/img/logo/201905/201905070250147153.jpg" onerror="this.src='/files/img/default.png'" alt=""/>
+                            </div>
+                        </a>
+                    </td>
+                    <td class="book-rank-idx">8</td>
+                    <td class="book-rank-info">
+                        <a href="https://www.tenmanga.com/book/Rebirth+of+the+Urban+Immortal+Cultivator.html" alt="Rebirth of the Urban Immortal Cultivator" title="Rebirth of the Urban Immortal Cultivator">
+                            <div class="book-name">Rebirth of the Urban Immortal Cultivator</div>
+                        </a>
+                        <div class="book-score">696210 Views</div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+                <div class="book-rank-item">
+            <table cellspacing="0" cellpadding="0">
+                <tr>
+                    <td>
+                        <a href="https://www.tenmanga.com/book/THE+GAMER.html" alt="THE GAMER" title="THE GAMER">
+                            <div class="book-img">
+                                <img src="/files/img/default.png" class="lazy-img" lazy_url="https://ta1.yx247.com/files/img/logo/201503/201503220938197299.jpg" onerror="this.src='/files/img/default.png'" alt=""/>
+                            </div>
+                        </a>
+                    </td>
+                    <td class="book-rank-idx">9</td>
+                    <td class="book-rank-info">
+                        <a href="https://www.tenmanga.com/book/THE+GAMER.html" alt="THE GAMER" title="THE GAMER">
+                            <div class="book-name">THE GAMER</div>
+                        </a>
+                        <div class="book-score">683154 Views</div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+                <div class="book-rank-item">
+            <table cellspacing="0" cellpadding="0">
+                <tr>
+                    <td>
+                        <a href="https://www.tenmanga.com/book/BLACK+CLOVER.html" alt="BLACK CLOVER" title="BLACK CLOVER">
+                            <div class="book-img">
+                                <img src="/files/img/default.png" class="lazy-img" lazy_url="https://ta1.yx247.com/files/img/logo/201504/201504050913031170.jpg" onerror="this.src='/files/img/default.png'" alt=""/>
+                            </div>
+                        </a>
+                    </td>
+                    <td class="book-rank-idx">10</td>
+                    <td class="book-rank-info">
+                        <a href="https://www.tenmanga.com/book/BLACK+CLOVER.html" alt="BLACK CLOVER" title="BLACK CLOVER">
+                            <div class="book-name">BLACK CLOVER</div>
+                        </a>
+                        <div class="book-score">570515 Views</div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+            </div>
+</div>
+<!--New Manga-->
+<div class="page-sec bk-ls-has-side">
+    <div class="sec-title">New Manga<a href="https://www.tenmanga.com/list/New-Book/" title=""><div class="more-btn">More <span class="ifont-arrow-right"></span></div></a></div>
+    <div class="book-ls bk-ls-side-sec">
+                <div class="book-item">
+            <div class="book-bg"></div>
+            <div class="book-inner-box">
+                <a href="https://www.tenmanga.com/book/Choukyori+Renai+no+Kodoku.html" alt="Choukyori Renai no Kodoku" title="Choukyori Renai no Kodoku">
+                    <div class="book-img">
+                        <img src="/files/img/default.png" class="lazy-img" lazy_url="https://ta1.yx247.com/files/img/logo/202305/202305172249474379.jpg" onerror="this.src='/files/img/default.png'" alt=""/>
+                    </div>
+                </a>
+                <a href="https://www.tenmanga.com/book/Choukyori+Renai+no+Kodoku.html">
+                    <div class="book-brief-box">
+                        <div class="book-brief-content">
+                            <div class="book-brief-title">Summary</div>
+                            <div class="book-brief-txt">The sweet story of the long distance relationship between a hockey player and a dentist — Shawn and Arthur.
+
+At times, reticent Arthur causes Shawn to have doubts. At times, the dentist's actions and the things he says unexpectedly always puts those uneasiness at rest, leaving Shawn more sure than ever of his love.
+
+Also includes a oneshot called Subway '88.</div>
+                            <div class="book-brief-more">More details...</div>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://www.tenmanga.com/book/Choukyori+Renai+no+Kodoku.html" alt="Choukyori Renai no Kodoku" title="Choukyori Renai no Kodoku">
+                    <div class="book-name">Choukyori Renai no Kodoku</div>
+                </a>
+                <div class="cate-ls">
+                                                            <a href="https://www.tenmanga.com/category/drama.html" alt="drama"><div class="cate-item">drama</div></a>
+                                                                                <a href="https://www.tenmanga.com/category/romance.html" alt="romance"><div class="cate-item">romance</div></a>
+                                                                                                                                        </div>
+                <div class="book-chp-info">5 Views</div>
+            </div>
+        </div>
+                        <div class="book-item">
+            <div class="book-bg"></div>
+            <div class="book-inner-box">
+                <a href="https://www.tenmanga.com/book/Gozen+3%3A00+no+Ice+Cream.html" alt="Gozen 3:00 no Ice Cream" title="Gozen 3:00 no Ice Cream">
+                    <div class="book-img">
+                        <img src="/files/img/default.png" class="lazy-img" lazy_url="https://ta1.yx247.com/files/img/logo/202305/202305171933171740.png" onerror="this.src='/files/img/default.png'" alt=""/>
+                    </div>
+                </a>
+                <a href="https://www.tenmanga.com/book/Gozen+3%3A00+no+Ice+Cream.html">
+                    <div class="book-brief-box">
+                        <div class="book-brief-content">
+                            <div class="book-brief-title">Summary</div>
+                            <div class="book-brief-txt">A story about a boy with a sweet tooth and a boy with a savory tooth who sneak out of bed in the middle of the night to eat ice cream.
+
+"I want my own ice cream." These two seem to melt into the night.</div>
+                            <div class="book-brief-more">More details...</div>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://www.tenmanga.com/book/Gozen+3%3A00+no+Ice+Cream.html" alt="Gozen 3:00 no Ice Cream" title="Gozen 3:00 no Ice Cream">
+                    <div class="book-name">Gozen 3:00 no Ice Cream</div>
+                </a>
+                <div class="cate-ls">
+                                                            <a href="https://www.tenmanga.com/category/Doujinshi.html" alt="Doujinshi"><div class="cate-item">Doujinshi</div></a>
+                                                                                <a href="https://www.tenmanga.com/category/Oneshot.html" alt="Oneshot"><div class="cate-item">Oneshot</div></a>
+                                                                                                </div>
+                <div class="book-chp-info">5 Views</div>
+            </div>
+        </div>
+                        <div class="book-item">
+            <div class="book-bg"></div>
+            <div class="book-inner-box">
+                <a href="https://www.tenmanga.com/book/So+I%E2%80%99M+The+Supreme+Lord+In+The+World+Of+Immortals.html" alt="So I’M The Supreme Lord In The World Of Immortals" title="So I’M The Supreme Lord In The World Of Immortals">
+                    <div class="book-img">
+                        <img src="/files/img/default.png" class="lazy-img" lazy_url="https://ta1.yx247.com/files/img/logo/202305/202305171930293884.jpg" onerror="this.src='/files/img/default.png'" alt=""/>
+                    </div>
+                </a>
+                <a href="https://www.tenmanga.com/book/So+I%E2%80%99M+The+Supreme+Lord+In+The+World+Of+Immortals.html">
+                    <div class="book-brief-box">
+                        <div class="book-brief-content">
+                            <div class="book-brief-title">Summary</div>
+                            <div class="book-brief-txt">A psychic boss as my younger brother? A fairy goddess begging to be my teacher?! I just want to be an ordinary person!It turns out that I am the supreme being in the fairy world /</div>
+                            <div class="book-brief-more">More details...</div>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://www.tenmanga.com/book/So+I%E2%80%99M+The+Supreme+Lord+In+The+World+Of+Immortals.html" alt="So I’M The Supreme Lord In The World Of Immortals" title="So I’M The Supreme Lord In The World Of Immortals">
+                    <div class="book-name">So I’M The Supreme Lord In The World Of Immortals</div>
+                </a>
+                <div class="cate-ls">
+                                                            <a href="https://www.tenmanga.com/category/action.html" alt="action"><div class="cate-item">action</div></a>
+                                                                                <a href="https://www.tenmanga.com/category/adventure.html" alt="adventure"><div class="cate-item">adventure</div></a>
+                                                                                                                                                                                </div>
+                <div class="book-chp-info">43 Views</div>
+            </div>
+        </div>
+                        <div class="book-item">
+            <div class="book-bg"></div>
+            <div class="book-inner-box">
+                <a href="https://www.tenmanga.com/book/Tenjou+no+Ai+Chijou+no+Koi.html" alt="Tenjou no Ai Chijou no Koi" title="Tenjou no Ai Chijou no Koi">
+                    <div class="book-img">
+                        <img src="/files/img/default.png" class="lazy-img" lazy_url="https://ta1.yx247.com/files/img/logo/202305/202305171602034612.jpg" onerror="this.src='/files/img/default.png'" alt=""/>
+                    </div>
+                </a>
+                <a href="https://www.tenmanga.com/book/Tenjou+no+Ai+Chijou+no+Koi.html">
+                    <div class="book-brief-box">
+                        <div class="book-brief-content">
+                            <div class="book-brief-title">Summary</div>
+                            <div class="book-brief-txt">Rudolf is the Crown Prince of the House of Hapsburg, a dynasty that has borne the title of Holy Roman Emperor and has held power equal to the Church since the Middle Ages. Ever since their experience together during a lakeside incident, Rudolf finds himself bound by fate to an orphan boy called Alfred... Introducing Tomoko Kato's epic and dramatic historical romance.</div>
+                            <div class="book-brief-more">More details...</div>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://www.tenmanga.com/book/Tenjou+no+Ai+Chijou+no+Koi.html" alt="Tenjou no Ai Chijou no Koi" title="Tenjou no Ai Chijou no Koi">
+                    <div class="book-name">Tenjou no Ai Chijou no Koi</div>
+                </a>
+                <div class="cate-ls">
+                                                            <a href="https://www.tenmanga.com/category/drama.html" alt="drama"><div class="cate-item">drama</div></a>
+                                                                                <a href="https://www.tenmanga.com/category/historical.html" alt="historical"><div class="cate-item">historical</div></a>
+                                                                                                                                        </div>
+                <div class="book-chp-info">5 Views</div>
+            </div>
+        </div>
+                        <div class="book-item">
+            <div class="book-bg"></div>
+            <div class="book-inner-box">
+                <a href="https://www.tenmanga.com/book/Shirokuma+Tensei%3A+Mori+no+Shugoshin+ni+Natta+zo+Densetsu.html" alt="Shirokuma Tensei: Mori no Shugoshin ni Natta zo Densetsu" title="Shirokuma Tensei: Mori no Shugoshin ni Natta zo Densetsu">
+                    <div class="book-img">
+                        <img src="/files/img/default.png" class="lazy-img" lazy_url="https://ta1.yx247.com/files/img/logo/202305/202305171600446058.jpg" onerror="this.src='/files/img/default.png'" alt=""/>
+                    </div>
+                </a>
+                <a href="https://www.tenmanga.com/book/Shirokuma+Tensei%3A+Mori+no+Shugoshin+ni+Natta+zo+Densetsu.html">
+                    <div class="book-brief-box">
+                        <div class="book-brief-content">
+                            <div class="book-brief-title">Summary</div>
+                            <div class="book-brief-txt">After a climber falls off a mountain, he wakes up as a polar bear! Now, he has to protect two werewolf sisters and use his wits to navigate the dangers of the forest.</div>
+                            <div class="book-brief-more">More details...</div>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://www.tenmanga.com/book/Shirokuma+Tensei%3A+Mori+no+Shugoshin+ni+Natta+zo+Densetsu.html" alt="Shirokuma Tensei: Mori no Shugoshin ni Natta zo Densetsu" title="Shirokuma Tensei: Mori no Shugoshin ni Natta zo Densetsu">
+                    <div class="book-name">Shirokuma Tensei: Mori no Shugoshin ni Natta zo Densetsu</div>
+                </a>
+                <div class="cate-ls">
+                                                            <a href="https://www.tenmanga.com/category/action.html" alt="action"><div class="cate-item">action</div></a>
+                                                                                <a href="https://www.tenmanga.com/category/adventure.html" alt="adventure"><div class="cate-item">adventure</div></a>
+                                                                                                                                                                                                                        </div>
+                <div class="book-chp-info">14 Views</div>
+            </div>
+        </div>
+                        <div class="book-item">
+            <div class="book-bg"></div>
+            <div class="book-inner-box">
+                <a href="https://www.tenmanga.com/book/Avle.html" alt="Avle" title="Avle">
+                    <div class="book-img">
+                        <img src="/files/img/default.png" class="lazy-img" lazy_url="https://ta1.yx247.com/files/img/logo/202305/202305171530328672.jpg" onerror="this.src='/files/img/default.png'" alt=""/>
+                    </div>
+                </a>
+                <a href="https://www.tenmanga.com/book/Avle.html">
+                    <div class="book-brief-box">
+                        <div class="book-brief-content">
+                            <div class="book-brief-title">Summary</div>
+                            <div class="book-brief-txt">Lee Sang-hee is a 25-year old ordinary college student who has a secret that he can't tell anyone that he's Bedeuro, a porn star who made it to the headlines a few years ago. Sanghee even bought his own porn DVD just to hide his dark past. And one day, he got into an accident after getting into a strange man's car and meeting that man for a deal. Everything's going well, not until he was left with no choice but to get back into porn with the guy involved in the accident to pay off his debts…</div>
+                            <div class="book-brief-more">More details...</div>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://www.tenmanga.com/book/Avle.html" alt="Avle" title="Avle">
+                    <div class="book-name">Avle</div>
+                </a>
+                <div class="cate-ls">
+                                                            <a href="https://www.tenmanga.com/category/mature.html" alt="mature"><div class="cate-item">mature</div></a>
+                                                                                <a href="https://www.tenmanga.com/category/romance.html" alt="romance"><div class="cate-item">romance</div></a>
+                                                                                                                                        </div>
+                <div class="book-chp-info">136 Views</div>
+            </div>
+        </div>
+                <div class="book-item-place"></div>
+        <div class="book-item-place"></div>
+                        <div class="book-item">
+            <div class="book-bg"></div>
+            <div class="book-inner-box">
+                <a href="https://www.tenmanga.com/book/Tsukushitagari+Na+Uchi+No+Yome+Nitsuite+Dere+Temoii+Ka.html" alt="Tsukushitagari Na Uchi No Yome Nitsuite Dere Temoii Ka" title="Tsukushitagari Na Uchi No Yome Nitsuite Dere Temoii Ka">
+                    <div class="book-img">
+                        <img src="/files/img/default.png" class="lazy-img" lazy_url="https://ta1.yx247.com/files/img/logo/202305/202305171433196090.jpg" onerror="this.src='/files/img/default.png'" alt=""/>
+                    </div>
+                </a>
+                <a href="https://www.tenmanga.com/book/Tsukushitagari+Na+Uchi+No+Yome+Nitsuite+Dere+Temoii+Ka.html">
+                    <div class="book-brief-box">
+                        <div class="book-brief-content">
+                            <div class="book-brief-title">Summary</div>
+                            <div class="book-brief-txt">There's the flower of Takamine High, Hanae Riko, whom every boy admires.
+Then, there's the plain boy, Niiyama Minato, who got proposed to by that most beautiful girl in school.
+Without knowing what's happening, the curtains on their newlywed life rises!
+For some reason, my bride, who's too cute and happily follows me around everywhere, refuses to leave my side...</div>
+                            <div class="book-brief-more">More details...</div>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://www.tenmanga.com/book/Tsukushitagari+Na+Uchi+No+Yome+Nitsuite+Dere+Temoii+Ka.html" alt="Tsukushitagari Na Uchi No Yome Nitsuite Dere Temoii Ka" title="Tsukushitagari Na Uchi No Yome Nitsuite Dere Temoii Ka">
+                    <div class="book-name">Tsukushitagari Na Uchi No Yome Nitsuite Dere Temoii Ka</div>
+                </a>
+                <div class="cate-ls">
+                                                            <a href="https://www.tenmanga.com/category/comedy.html" alt="comedy"><div class="cate-item">comedy</div></a>
+                                                                                <a href="https://www.tenmanga.com/category/romance.html" alt="romance"><div class="cate-item">romance</div></a>
+                                                                                                                                        </div>
+                <div class="book-chp-info">43 Views</div>
+            </div>
+        </div>
+                        <div class="book-item">
+            <div class="book-bg"></div>
+            <div class="book-inner-box">
+                <a href="https://www.tenmanga.com/book/The+story+of+getting+remarried+and+having+a+cute+older+sister.html" alt="The story of getting remarried and having a cute older sister" title="The story of getting remarried and having a cute older sister">
+                    <div class="book-img">
+                        <img src="/files/img/default.png" class="lazy-img" lazy_url="https://ta1.yx247.com/files/img/logo/202305/202305171344247475.jpg" onerror="this.src='/files/img/default.png'" alt=""/>
+                    </div>
+                </a>
+                <a href="https://www.tenmanga.com/book/The+story+of+getting+remarried+and+having+a+cute+older+sister.html">
+                    <div class="book-brief-box">
+                        <div class="book-brief-content">
+                            <div class="book-brief-title">Summary</div>
+                            <div class="book-brief-txt">N/A</div>
+                            <div class="book-brief-more">More details...</div>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://www.tenmanga.com/book/The+story+of+getting+remarried+and+having+a+cute+older+sister.html" alt="The story of getting remarried and having a cute older sister" title="The story of getting remarried and having a cute older sister">
+                    <div class="book-name">The story of getting remarried and having a cute older sister</div>
+                </a>
+                <div class="cate-ls">
+                                                            <a href="https://www.tenmanga.com/category/Oneshot.html" alt="Oneshot"><div class="cate-item">Oneshot</div></a>
+                                                        </div>
+                <div class="book-chp-info">6 Views</div>
+            </div>
+        </div>
+                        <div class="book-item">
+            <div class="book-bg"></div>
+            <div class="book-inner-box">
+                <a href="https://www.tenmanga.com/book/Usotsuki+Satsuki+wa+Shi+ga+Mieru.html" alt="Usotsuki Satsuki wa Shi ga Mieru" title="Usotsuki Satsuki wa Shi ga Mieru">
+                    <div class="book-img">
+                        <img src="/files/img/default.png" class="lazy-img" lazy_url="https://ta1.yx247.com/files/img/logo/202305/202305171332504600.jpg" onerror="this.src='/files/img/default.png'" alt=""/>
+                    </div>
+                </a>
+                <a href="https://www.tenmanga.com/book/Usotsuki+Satsuki+wa+Shi+ga+Mieru.html">
+                    <div class="book-brief-box">
+                        <div class="book-brief-content">
+                            <div class="book-brief-title">Summary</div>
+                            <div class="book-brief-txt">"You… are going to die tomorrow."  
+  
+Minadzuki Satsuki, 16 years old. Apart from being antisocial and declaring the death of her classmates, she is a normal high school second-year student. Her nickname is "Liar Satsuki".  
+  
+However, her eyes alone are abnormal. What she is gazing at is…</div>
+                            <div class="book-brief-more">More details...</div>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://www.tenmanga.com/book/Usotsuki+Satsuki+wa+Shi+ga+Mieru.html" alt="Usotsuki Satsuki wa Shi ga Mieru" title="Usotsuki Satsuki wa Shi ga Mieru">
+                    <div class="book-name">Usotsuki Satsuki wa Shi ga Mieru</div>
+                </a>
+                <div class="cate-ls">
+                                                            <a href="https://www.tenmanga.com/category/horror.html" alt="horror"><div class="cate-item">horror</div></a>
+                                                                                <a href="https://www.tenmanga.com/category/mystery.html" alt="mystery"><div class="cate-item">mystery</div></a>
+                                                                                                                                                                                                                        </div>
+                <div class="book-chp-info">164 Views</div>
+            </div>
+        </div>
+                        <div class="book-item">
+            <div class="book-bg"></div>
+            <div class="book-inner-box">
+                <a href="https://www.tenmanga.com/book/Shiroi+Shoujo+to+Onii-santachi.html" alt="Shiroi Shoujo to Onii-santachi" title="Shiroi Shoujo to Onii-santachi">
+                    <div class="book-img">
+                        <img src="/files/img/default.png" class="lazy-img" lazy_url="https://ta1.yx247.com/files/img/logo/202305/202305171139272384.jpg" onerror="this.src='/files/img/default.png'" alt=""/>
+                    </div>
+                </a>
+                <a href="https://www.tenmanga.com/book/Shiroi+Shoujo+to+Onii-santachi.html">
+                    <div class="book-brief-box">
+                        <div class="book-brief-content">
+                            <div class="book-brief-title">Summary</div>
+                            <div class="book-brief-txt">A trial sketch about a girl and her older brothers.</div>
+                            <div class="book-brief-more">More details...</div>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://www.tenmanga.com/book/Shiroi+Shoujo+to+Onii-santachi.html" alt="Shiroi Shoujo to Onii-santachi" title="Shiroi Shoujo to Onii-santachi">
+                    <div class="book-name">Shiroi Shoujo to Onii-santachi</div>
+                </a>
+                <div class="cate-ls">
+                                    </div>
+                <div class="book-chp-info">5 Views</div>
+            </div>
+        </div>
+                        <div class="book-item">
+            <div class="book-bg"></div>
+            <div class="book-inner-box">
+                <a href="https://www.tenmanga.com/book/A+Succubus+Who+Immediately+Fell.html" alt="A Succubus Who Immediately Fell" title="A Succubus Who Immediately Fell">
+                    <div class="book-img">
+                        <img src="/files/img/default.png" class="lazy-img" lazy_url="https://ta1.yx247.com/files/img/logo/202305/202305171139249421.jpg" onerror="this.src='/files/img/default.png'" alt=""/>
+                    </div>
+                </a>
+                <a href="https://www.tenmanga.com/book/A+Succubus+Who+Immediately+Fell.html">
+                    <div class="book-brief-box">
+                        <div class="book-brief-content">
+                            <div class="book-brief-title">Summary</div>
+                            <div class="book-brief-txt">N/A</div>
+                            <div class="book-brief-more">More details...</div>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://www.tenmanga.com/book/A+Succubus+Who+Immediately+Fell.html" alt="A Succubus Who Immediately Fell" title="A Succubus Who Immediately Fell">
+                    <div class="book-name">A Succubus Who Immediately Fell</div>
+                </a>
+                <div class="cate-ls">
+                                                            <a href="https://www.tenmanga.com/category/comedy.html" alt="comedy"><div class="cate-item">comedy</div></a>
+                                                                                <a href="https://www.tenmanga.com/category/Oneshot.html" alt="Oneshot"><div class="cate-item">Oneshot</div></a>
+                                                        </div>
+                <div class="book-chp-info">6 Views</div>
+            </div>
+        </div>
+                        <div class="book-item">
+            <div class="book-bg"></div>
+            <div class="book-inner-box">
+                <a href="https://www.tenmanga.com/book/Ponite+ni+Yureru.html" alt="Ponite ni Yureru" title="Ponite ni Yureru">
+                    <div class="book-img">
+                        <img src="/files/img/default.png" class="lazy-img" lazy_url="https://ta1.yx247.com/files/img/logo/202305/202305171139017216.png" onerror="this.src='/files/img/default.png'" alt=""/>
+                    </div>
+                </a>
+                <a href="https://www.tenmanga.com/book/Ponite+ni+Yureru.html">
+                    <div class="book-brief-box">
+                        <div class="book-brief-content">
+                            <div class="book-brief-title">Summary</div>
+                            <div class="book-brief-txt">A middle-schooler gets enamoured by a girl's ponytail.</div>
+                            <div class="book-brief-more">More details...</div>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://www.tenmanga.com/book/Ponite+ni+Yureru.html" alt="Ponite ni Yureru" title="Ponite ni Yureru">
+                    <div class="book-name">Ponite ni Yureru</div>
+                </a>
+                <div class="cate-ls">
+                                                            <a href="https://www.tenmanga.com/category/Oneshot.html" alt="Oneshot"><div class="cate-item">Oneshot</div></a>
+                                                                                <a href="https://www.tenmanga.com/category/romance.html" alt="romance"><div class="cate-item">romance</div></a>
+                                                                                                                                        </div>
+                <div class="book-chp-info">5 Views</div>
+            </div>
+        </div>
+                    </div>
+    <div class="bk-ls-side">
+        <!--top-->
+        <div class="book-top-title">Most popular</div>
+                        <div class="book-top-item">
+            <table cellspacing="0" cellpadding="0">
+                <tr>
+                    <td>
+                        <a href="https://www.tenmanga.com/book/KONO+S+O%2C+MI+YO%21.html" alt="KONO S O, MI YO!" title="KONO S O, MI YO!">
+                            <div class="book-img">
+                                <img src="/files/img/default.png" class="lazy-img" lazy_url="https://ta1.yx247.com/files/img/logo/201503/201503220909325842.jpg" onerror="this.src='/files/img/default.png'" alt=""/>
+                            </div>
+                        </a>
+                    </td>
+                    <td class="book-top-info">
+                        <a href="https://www.tenmanga.com/book/KONO+S+O%2C+MI+YO%21.html" alt="KONO S O, MI YO!" title="KONO S O, MI YO!">
+                            <div class="book-name">KONO S O, MI YO!</div>
+                        </a>
+                        <a href="https://www.tenmanga.com/chapter/KonoSOMiYoChapter139/3657123/" alt="Kono S O, Mi Yo! Chapter 139" title="Kono S O, Mi Yo! Chapter 139">
+                            <div class="book-chp-info">
+                                <div class="book-chp">Ch139<span class="book-time">2021-06-06</span></div>
+
+                            </div>
+                        </a>
+                        <div class="book-score">276717 Views</div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+                                <div class="book-top-item">
+            <table cellspacing="0" cellpadding="0">
+                <tr>
+                    <td>
+                        <a href="https://www.tenmanga.com/book/%2FBLUSH-DC..html" alt="/BLUSH-DC." title="/BLUSH-DC.">
+                            <div class="book-img">
+                                <img src="/files/img/default.png" class="lazy-img" lazy_url="https://ta1.yx247.com/files/img/logo/201503/201503220320413612.jpg" onerror="this.src='/files/img/default.png'" alt=""/>
+                            </div>
+                        </a>
+                    </td>
+                    <td class="book-top-info">
+                        <a href="https://www.tenmanga.com/book/%2FBLUSH-DC..html" alt="/BLUSH-DC." title="/BLUSH-DC.">
+                            <div class="book-name">/BLUSH-DC.</div>
+                        </a>
+                        <a href="https://www.tenmanga.com/chapter/BlushDCChapter45/1522614/" alt="/Blush-DC. Chapter 45" title="/Blush-DC. Chapter 45">
+                            <div class="book-chp-info">
+                                <div class="book-chp">Ch45<span class="book-time">2019-07-24</span></div>
+
+                            </div>
+                        </a>
+                        <div class="book-score">275515 Views</div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+                                <div class="book-top-item">
+            <table cellspacing="0" cellpadding="0">
+                <tr>
+                    <td>
+                        <a href="https://www.tenmanga.com/book/DOULOU+DALU.html" alt="DOULOU DALU" title="DOULOU DALU">
+                            <div class="book-img">
+                                <img src="/files/img/default.png" class="lazy-img" lazy_url="https://ta1.yx247.com/files/img/logo/201503/201503220917194373.jpg" onerror="this.src='/files/img/default.png'" alt=""/>
+                            </div>
+                        </a>
+                    </td>
+                    <td class="book-top-info">
+                        <a href="https://www.tenmanga.com/book/DOULOU+DALU.html" alt="DOULOU DALU" title="DOULOU DALU">
+                            <div class="book-name">DOULOU DALU</div>
+                        </a>
+                        <a href="https://www.tenmanga.com/chapter/DoulouDaluChapter326/8543235/" alt="Doulou Dalu Chapter 326" title="Doulou Dalu Chapter 326">
+                            <div class="book-chp-info">
+                                <div class="book-chp">Ch326<span class="book-time">2023-05-06</span></div>
+
+                            </div>
+                        </a>
+                        <div class="book-score">263147 Views</div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+                                <div class="book-top-item">
+            <table cellspacing="0" cellpadding="0">
+                <tr>
+                    <td>
+                        <a href="https://www.tenmanga.com/book/MONSTER+MUSUME+NO+IRU+NICHIJOU.html" alt="MONSTER MUSUME NO IRU NICHIJOU" title="MONSTER MUSUME NO IRU NICHIJOU">
+                            <div class="book-img">
+                                <img src="/files/img/default.png" class="lazy-img" lazy_url="https://ta1.yx247.com/files/img/logo/201503/201503220926486297.jpg" onerror="this.src='/files/img/default.png'" alt=""/>
+                            </div>
+                        </a>
+                    </td>
+                    <td class="book-top-info">
+                        <a href="https://www.tenmanga.com/book/MONSTER+MUSUME+NO+IRU+NICHIJOU.html" alt="MONSTER MUSUME NO IRU NICHIJOU" title="MONSTER MUSUME NO IRU NICHIJOU">
+                            <div class="book-name">MONSTER MUSUME NO IRU NICHIJOU</div>
+                        </a>
+                        <a href="https://www.tenmanga.com/chapter/MonsterMusumenoIruNichijou80/8059761/" alt="Monster Musume no Iru Nichijou 80" title="Monster Musume no Iru Nichijou 80">
+                            <div class="book-chp-info">
+                                <div class="book-chp">Ch80<span class="book-time">2023-01-23</span></div>
+
+                            </div>
+                        </a>
+                        <div class="book-score">259883 Views</div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+                                <div class="book-top-item">
+            <table cellspacing="0" cellpadding="0">
+                <tr>
+                    <td>
+                        <a href="https://www.tenmanga.com/book/07+Ghost.html" alt="07 Ghost" title="07 Ghost">
+                            <div class="book-img">
+                                <img src="/files/img/default.png" class="lazy-img" lazy_url="https://ta1.yx247.com/files/img/logo/201503/2015032209365839511.jpg" onerror="this.src='/files/img/default.png'" alt=""/>
+                            </div>
+                        </a>
+                    </td>
+                    <td class="book-top-info">
+                        <a href="https://www.tenmanga.com/book/07+Ghost.html" alt="07 Ghost" title="07 Ghost">
+                            <div class="book-name">07 Ghost</div>
+                        </a>
+                        <a href="https://www.tenmanga.com/chapter/07Ghost100/787773/" alt="07 Ghost 100" title="07 Ghost 100">
+                            <div class="book-chp-info">
+                                <div class="book-chp">Ch100<span class="book-time">2016-05-07</span></div>
+
+                            </div>
+                        </a>
+                        <div class="book-score">250212 Views</div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+                                <div class="book-top-item">
+            <table cellspacing="0" cellpadding="0">
+                <tr>
+                    <td>
+                        <a href="https://www.tenmanga.com/book/World+Trigger.html" alt="World Trigger" title="World Trigger">
+                            <div class="book-img">
+                                <img src="/files/img/default.png" class="lazy-img" lazy_url="https://ta1.yx247.com/files/img/logo/201503/201503220935258317.jpg" onerror="this.src='/files/img/default.png'" alt=""/>
+                            </div>
+                        </a>
+                    </td>
+                    <td class="book-top-info">
+                        <a href="https://www.tenmanga.com/book/World+Trigger.html" alt="World Trigger" title="World Trigger">
+                            <div class="book-name">World Trigger</div>
+                        </a>
+                        <a href="https://www.tenmanga.com/chapter/WorldTriggerChapter232/8479744/" alt="World Trigger Chapter 232" title="World Trigger Chapter 232">
+                            <div class="book-chp-info">
+                                <div class="book-chp">Ch232<span class="book-time">2023-04-03</span></div>
+
+                            </div>
+                        </a>
+                        <div class="book-score">246142 Views</div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+                    </div>
+</div>
+<!--Completed-->
+<div class="page-sec">
+    <div class="sec-title">Completed<a href="https://www.tenmanga.com/category/completed.html" title=""><div class="more-btn">More <span class="ifont-arrow-right"></span></div></a></div>
+    <div class="book-ls book-ls-twoline">
+                <div class="book-item">
+            <div class="book-bg"></div>
+            <div class="book-inner-box">
+                <a href="https://www.tenmanga.com/book/Hapi+Mari.html" alt="Hapi Mari" title="Hapi Mari">
+                    <div class="book-img">
+                        <img src="/files/img/default.png" class="lazy-img" lazy_url="https://ta1.yx247.com/files/img/logo/201503/201503220200492395.jpg" onerror="this.src='/files/img/default.png'" alt=""/>
+                    </div>
+                </a>
+                <a href="https://www.tenmanga.com/book/Hapi+Mari.html">
+                    <div class="book-brief-box">
+                        <div class="book-brief-content">
+                            <div class="book-brief-title">Summary</div>
+                            <div class="book-brief-txt">Men - they&#39;re the root of Takanashi Chiwa&#39;s problems, which is why she never had the time nor the opportunity to have a boyfriend in her entire life. A full-time office lady and a part-time hostess, she works night and day to pay off her dad&#39;s debt from his failed business. One night at her part-time job, a high-class customer has her fired. Then the next day, she&#39;s called in to see the president - whom she had never even seen before in the office - only to find out she&#39;s to marry him! But what kind of guy is Mamiya Hokuto anyway? Will he become one of Chiwa&#39;s problems, or will he save her from them? And will this marriage even last?!</div>
+                            <div class="book-brief-more">More details...</div>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://www.tenmanga.com/book/Hapi+Mari.html" alt="Hapi Mari" title="Hapi Mari">
+                    <div class="book-name">Hapi Mari</div>
+                </a>
+                <div class="cate-ls">
+                                                            <a href="https://www.tenmanga.com/category/comedy.html" alt="comedy"><div class="cate-item">comedy</div></a>
+                                                                                <a href="https://www.tenmanga.com/category/drama.html" alt="drama"><div class="cate-item">drama</div></a>
+                                                                                                                                        </div>
+                <div class="book-chp-info">45817 Views</div>
+            </div>
+        </div>
+                <div class="book-item">
+            <div class="book-bg"></div>
+            <div class="book-inner-box">
+                <a href="https://www.tenmanga.com/book/Nana+to+Kaoru%3A+Black+Label.html" alt="Nana to Kaoru: Black Label" title="Nana to Kaoru: Black Label">
+                    <div class="book-img">
+                        <img src="/files/img/default.png" class="lazy-img" lazy_url="https://ta1.yx247.com/files/img/logo/201503/201503220653159231.jpg" onerror="this.src='/files/img/default.png'" alt=""/>
+                    </div>
+                </a>
+                <a href="https://www.tenmanga.com/book/Nana+to+Kaoru%3A+Black+Label.html">
+                    <div class="book-brief-box">
+                        <div class="book-brief-content">
+                            <div class="book-brief-title">Summary</div>
+                            <div class="book-brief-txt">This “Arashi” series begins 8 months in the future of YA, with Nana and Kaoru in the summer of their final year of high school.
+
+This series uses a different support cast & different location setting than the original serialization, and as such it doesn't really spoil anything from the main series. 
+
+Nana to Kaoru (Prequel)</div>
+                            <div class="book-brief-more">More details...</div>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://www.tenmanga.com/book/Nana+to+Kaoru%3A+Black+Label.html" alt="Nana to Kaoru: Black Label" title="Nana to Kaoru: Black Label">
+                    <div class="book-name">Nana to Kaoru: Black Label</div>
+                </a>
+                <div class="cate-ls">
+                                                            <a href="https://www.tenmanga.com/category/comedy.html" alt="comedy"><div class="cate-item">comedy</div></a>
+                                                                                <a href="https://www.tenmanga.com/category/drama.html" alt="drama"><div class="cate-item">drama</div></a>
+                                                                                                                                                                                                                                                                                                        </div>
+                <div class="book-chp-info">45633 Views</div>
+            </div>
+        </div>
+                <div class="book-item">
+            <div class="book-bg"></div>
+            <div class="book-inner-box">
+                <a href="https://www.tenmanga.com/book/XBlade.html" alt="XBlade" title="XBlade">
+                    <div class="book-img">
+                        <img src="/files/img/default.png" class="lazy-img" lazy_url="https://ta1.yx247.com/files/img/logo/201503/201503220345254359.jpg" onerror="this.src='/files/img/default.png'" alt=""/>
+                    </div>
+                </a>
+                <a href="https://www.tenmanga.com/book/XBlade.html">
+                    <div class="book-brief-box">
+                        <div class="book-brief-content">
+                            <div class="book-brief-title">Summary</div>
+                            <div class="book-brief-txt">Four years ago, a large scale disaster in Tokyo claimed two million lives. The remaining thirteen districts of the city were isolated into the Tokyo Barricade Zone. Morisaki Harumi, an unruly kid with great fighting strength, is his family&#39;s sole survivor from the incident.</div>
+                            <div class="book-brief-more">More details...</div>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://www.tenmanga.com/book/XBlade.html" alt="XBlade" title="XBlade">
+                    <div class="book-name">XBlade</div>
+                </a>
+                <div class="cate-ls">
+                                                            <a href="https://www.tenmanga.com/category/action.html" alt="action"><div class="cate-item">action</div></a>
+                                                                                <a href="https://www.tenmanga.com/category/fantasy.html" alt="fantasy"><div class="cate-item">fantasy</div></a>
+                                                                                                                                                                                                                        </div>
+                <div class="book-chp-info">44886 Views</div>
+            </div>
+        </div>
+                <div class="book-item">
+            <div class="book-bg"></div>
+            <div class="book-inner-box">
+                <a href="https://www.tenmanga.com/book/Colorful+Harvest.html" alt="Colorful Harvest" title="Colorful Harvest">
+                    <div class="book-img">
+                        <img src="/files/img/default.png" class="lazy-img" lazy_url="https://ta1.yx247.com/files/img/logo/201507/201507061910596759.jpg" onerror="this.src='/files/img/default.png'" alt=""/>
+                    </div>
+                </a>
+                <a href="https://www.tenmanga.com/book/Colorful+Harvest.html">
+                    <div class="book-brief-box">
+                        <div class="book-brief-content">
+                            <div class="book-brief-title">Summary</div>
+                            <div class="book-brief-txt">Ryosuke returns back to his birthplace to help run his family's vineyard after his father gets hospitalized. He has sour memories of his hometown after being shut down by the girl next door, who he admired from day one. That's the whole reason why he's never returned after moving...&nbsp; 
+                 Ryosuke returns back to his birthplace to help run his family's vineyard after his father gets hospitalized. He has sour memories of his hometown after being shut down by the girl next door, who he admired from day one. That's the whole reason why he's never returned after moving to Tokyo, to attend College, 3 years ago. Despite his reluctant return, Ryosuke happens to be quite popular with the ladies. His sexual endeavors start off with a fling with a former high school classmate, a charming girl working at his parent's vineyard, and a sexy nurse. He even manages to allure the girl next door who he has been dreaming of his whole life but...&nbsp;Show less</div>
+                            <div class="book-brief-more">More details...</div>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://www.tenmanga.com/book/Colorful+Harvest.html" alt="Colorful Harvest" title="Colorful Harvest">
+                    <div class="book-name">Colorful Harvest</div>
+                </a>
+                <div class="cate-ls">
+                                                            <a href="https://www.tenmanga.com/category/comedy.html" alt="comedy"><div class="cate-item">comedy</div></a>
+                                                                                <a href="https://www.tenmanga.com/category/drama.html" alt="drama"><div class="cate-item">drama</div></a>
+                                                                                                                                                                                </div>
+                <div class="book-chp-info">44633 Views</div>
+            </div>
+        </div>
+                <div class="book-item">
+            <div class="book-bg"></div>
+            <div class="book-inner-box">
+                <a href="https://www.tenmanga.com/book/Initial+D.html" alt="Initial D" title="Initial D">
+                    <div class="book-img">
+                        <img src="/files/img/default.png" class="lazy-img" lazy_url="https://ta1.yx247.com/files/img/logo/201503/201503220759177897.jpg" onerror="this.src='/files/img/default.png'" alt=""/>
+                    </div>
+                </a>
+                <a href="https://www.tenmanga.com/book/Initial+D.html">
+                    <div class="book-brief-box">
+                        <div class="book-brief-content">
+                            <div class="book-brief-title">Summary</div>
+                            <div class="book-brief-txt">Only the fearless survive in the white-hot world of street racing, as teams take on dangerous roads in the shadow of Mt. Akina. Behind the wheel of the mysterious &quot;Ghost of Akina&quot; is Takumi, on his way to becoming the greatest racer ever.</div>
+                            <div class="book-brief-more">More details...</div>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://www.tenmanga.com/book/Initial+D.html" alt="Initial D" title="Initial D">
+                    <div class="book-name">Initial D</div>
+                </a>
+                <div class="cate-ls">
+                                                            <a href="https://www.tenmanga.com/category/seinen.html" alt="seinen"><div class="cate-item">seinen</div></a>
+                                                                                <a href="https://www.tenmanga.com/category/sports.html" alt="sports"><div class="cate-item">sports</div></a>
+                                                        </div>
+                <div class="book-chp-info">44522 Views</div>
+            </div>
+        </div>
+                <div class="book-item">
+            <div class="book-bg"></div>
+            <div class="book-inner-box">
+                <a href="https://www.tenmanga.com/book/Dengeki+Daisy.html" alt="Dengeki Daisy" title="Dengeki Daisy">
+                    <div class="book-img">
+                        <img src="/files/img/default.png" class="lazy-img" lazy_url="https://ta1.yx247.com/files/img/logo/201503/201503220937191442.jpg" onerror="this.src='/files/img/default.png'" alt=""/>
+                    </div>
+                </a>
+                <a href="https://www.tenmanga.com/book/Dengeki+Daisy.html">
+                    <div class="book-brief-box">
+                        <div class="book-brief-content">
+                            <div class="book-brief-title">Summary</div>
+                            <div class="book-brief-txt">&quot;No matter what happens, I&#39;ll protect you.&quot;Teru, a poor and kind girl, recently lost her older brother, her only remaining relative. Before he died he gave her a cell phone connecting her to a person he said would support her if ever he were unable to. As time passes she is cheered on by text messages sent from this enigmatic person, known only as DAISY. Then, one day, through an unexpected incident, Teru begins working for the delinquent school janitor, Kurosaki. But this sadistic scoundrel Kurosaki is really...!?</div>
+                            <div class="book-brief-more">More details...</div>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://www.tenmanga.com/book/Dengeki+Daisy.html" alt="Dengeki Daisy" title="Dengeki Daisy">
+                    <div class="book-name">Dengeki Daisy</div>
+                </a>
+                <div class="cate-ls">
+                                                            <a href="https://www.tenmanga.com/category/romance.html" alt="romance"><div class="cate-item">romance</div></a>
+                                                                                <a href="https://www.tenmanga.com/category/school+life.html" alt="school life"><div class="cate-item">school life</div></a>
+                                                                                                </div>
+                <div class="book-chp-info">44250 Views</div>
+            </div>
+        </div>
+                <div class="book-item">
+            <div class="book-bg"></div>
+            <div class="book-inner-box">
+                <a href="https://www.tenmanga.com/book/Gyo.html" alt="Gyo" title="Gyo">
+                    <div class="book-img">
+                        <img src="/files/img/default.png" class="lazy-img" lazy_url="https://ta1.yx247.com/files/img/logo/201507/201507061928328201.jpg" onerror="this.src='/files/img/default.png'" alt=""/>
+                    </div>
+                </a>
+                <a href="https://www.tenmanga.com/book/Gyo.html">
+                    <div class="book-brief-box">
+                        <div class="book-brief-content">
+                            <div class="book-brief-title">Summary</div>
+                            <div class="book-brief-txt">[From Viz]:
+
+Something is rotten in Okinawa...the floating stench of death hangs over the island..What is it? A strange, legged fish appears on the scene...so begins Tadashi and Kaori's spiral into the horror (and stench) of the sea.
+                 [From Viz]:
+
+Something is rotten in Okinawa...the floating stench of death hangs over the island..What is it? A strange, legged fish appears on the scene...so begins Tadashi and Kaori's spiral into the horror (and stench) of the sea.&nbsp;Show less</div>
+                            <div class="book-brief-more">More details...</div>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://www.tenmanga.com/book/Gyo.html" alt="Gyo" title="Gyo">
+                    <div class="book-name">Gyo</div>
+                </a>
+                <div class="cate-ls">
+                                                            <a href="https://www.tenmanga.com/category/drama.html" alt="drama"><div class="cate-item">drama</div></a>
+                                                                                <a href="https://www.tenmanga.com/category/horror.html" alt="horror"><div class="cate-item">horror</div></a>
+                                                                                                                                        </div>
+                <div class="book-chp-info">43919 Views</div>
+            </div>
+        </div>
+                <div class="book-item">
+            <div class="book-bg"></div>
+            <div class="book-inner-box">
+                <a href="https://www.tenmanga.com/book/YUAN+ZUN.html" alt="YUAN ZUN" title="YUAN ZUN">
+                    <div class="book-img">
+                        <img src="/files/img/default.png" class="lazy-img" lazy_url="https://ta1.yx247.com/files/img/logo/201802/201802070230044181.jpg" onerror="this.src='/files/img/default.png'" alt=""/>
+                    </div>
+                </a>
+                <a href="https://www.tenmanga.com/book/YUAN+ZUN.html">
+                    <div class="book-brief-box">
+                        <div class="book-brief-content">
+                            <div class="book-brief-title">Summary</div>
+                            <div class="book-brief-txt">A teenager holds a pen, while a dragon dances; Chaos surrounds the world, lighting the sky. In this world, will the python swallow the dragon, or will the saint dragon rise?!</div>
+                            <div class="book-brief-more">More details...</div>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://www.tenmanga.com/book/YUAN+ZUN.html" alt="YUAN ZUN" title="YUAN ZUN">
+                    <div class="book-name">YUAN ZUN</div>
+                </a>
+                <div class="cate-ls">
+                                                            <a href="https://www.tenmanga.com/category/adventure.html" alt="adventure"><div class="cate-item">adventure</div></a>
+                                                                                <a href="https://www.tenmanga.com/category/fantasy.html" alt="fantasy"><div class="cate-item">fantasy</div></a>
+                                                                                                </div>
+                <div class="book-chp-info">42753 Views</div>
+            </div>
+        </div>
+                <div class="book-item">
+            <div class="book-bg"></div>
+            <div class="book-inner-box">
+                <a href="https://www.tenmanga.com/book/AKI-SORA.html" alt="AKI-SORA" title="AKI-SORA">
+                    <div class="book-img">
+                        <img src="/files/img/default.png" class="lazy-img" lazy_url="https://ta1.yx247.com/files/img/logo/201503/201503212236573437.jpg" onerror="this.src='/files/img/default.png'" alt=""/>
+                    </div>
+                </a>
+                <a href="https://www.tenmanga.com/book/AKI-SORA.html">
+                    <div class="book-brief-box">
+                        <div class="book-brief-content">
+                            <div class="book-brief-title">Summary</div>
+                            <div class="book-brief-txt">Ever since he was a young child Sora Aoi had always exchanged words of &quot;I love you&quot; with his older sister Aki. Now, as he comes of age, he finds it much harder to exchange such comforts as they did in those simpler times. When Aki demonstrates her feelings toward him to go beyond a sisters love Sora finds himself questioning his feelings for his sister. Realizing their affection for one another they consumate their love in secret.  In a society that would never understand, they must now keep their love a secret from their family and everyone they know. With a boisterous twin sister and friends that want to be more than just friends, Sora will find it wont be so easy. Hormones raging, you can be sure that Itosugi Masahiro's &quot;Aki-Sora&quot; will be a sure-fire drama that you don't wanna miss!
+
+Warning: Nudity and graphic situations!</div>
+                            <div class="book-brief-more">More details...</div>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://www.tenmanga.com/book/AKI-SORA.html" alt="AKI-SORA" title="AKI-SORA">
+                    <div class="book-name">AKI-SORA</div>
+                </a>
+                <div class="cate-ls">
+                                                            <a href="https://www.tenmanga.com/category/Adult.html" alt="Adult"><div class="cate-item">Adult</div></a>
+                                                                                <a href="https://www.tenmanga.com/category/drama.html" alt="drama"><div class="cate-item">drama</div></a>
+                                                                                                                                                                                                                                                                                                        </div>
+                <div class="book-chp-info">42286 Views</div>
+            </div>
+        </div>
+                <div class="book-item">
+            <div class="book-bg"></div>
+            <div class="book-inner-box">
+                <a href="https://www.tenmanga.com/book/DOREIKU+-+BOKU+TO+23-NIN+NO+DOREI.html" alt="DOREIKU - BOKU TO 23-NIN NO DOREI" title="DOREIKU - BOKU TO 23-NIN NO DOREI">
+                    <div class="book-img">
+                        <img src="/files/img/default.png" class="lazy-img" lazy_url="https://ta1.yx247.com/files/img/logo/201603/201603151323527267.jpg" onerror="this.src='/files/img/default.png'" alt=""/>
+                    </div>
+                </a>
+                <a href="https://www.tenmanga.com/book/DOREIKU+-+BOKU+TO+23-NIN+NO+DOREI.html">
+                    <div class="book-brief-box">
+                        <div class="book-brief-content">
+                            <div class="book-brief-title">Summary</div>
+                            <div class="book-brief-txt">What if you could enslave anyone you ever wanted? Well, this comes close. The SCM lets you enslave anyone who is also wearing an SCM, at a price. One must win over the other, at anything, in order for the other to become their slave.</div>
+                            <div class="book-brief-more">More details...</div>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://www.tenmanga.com/book/DOREIKU+-+BOKU+TO+23-NIN+NO+DOREI.html" alt="DOREIKU - BOKU TO 23-NIN NO DOREI" title="DOREIKU - BOKU TO 23-NIN NO DOREI">
+                    <div class="book-name">DOREIKU - BOKU TO 23-NIN NO DOREI</div>
+                </a>
+                <div class="cate-ls">
+                                                            <a href="https://www.tenmanga.com/category/Adult.html" alt="Adult"><div class="cate-item">Adult</div></a>
+                                                                                <a href="https://www.tenmanga.com/category/drama.html" alt="drama"><div class="cate-item">drama</div></a>
+                                                                                                                                                                                </div>
+                <div class="book-chp-info">42085 Views</div>
+            </div>
+        </div>
+                <div class="book-item">
+            <div class="book-bg"></div>
+            <div class="book-inner-box">
+                <a href="https://www.tenmanga.com/book/KAGUYA-SAMA+WA+KOKURASETAI+-+TENSAI-TACHI+NO+RENAI+ZUNOUSEN.html" alt="KAGUYA-SAMA WA KOKURASETAI - TENSAI-TACHI NO RENAI ZUNOUSEN" title="KAGUYA-SAMA WA KOKURASETAI - TENSAI-TACHI NO RENAI ZUNOUSEN">
+                    <div class="book-img">
+                        <img src="/files/img/default.png" class="lazy-img" lazy_url="https://ta1.yx247.com/files/img/logo/201603/201603151215532855.jpg" onerror="this.src='/files/img/default.png'" alt=""/>
+                    </div>
+                </a>
+                <a href="https://www.tenmanga.com/book/KAGUYA-SAMA+WA+KOKURASETAI+-+TENSAI-TACHI+NO+RENAI+ZUNOUSEN.html">
+                    <div class="book-brief-box">
+                        <div class="book-brief-content">
+                            <div class="book-brief-title">Summary</div>
+                            <div class="book-brief-txt">Kaguya Shinomiya and Miyuki Shirogane are the members of the incredibly prestigious Shuchi'in Academy's student council, asserting their positions as geniuses among geniuses. All the time they spend together has caused the two of them to develop feelings for each other, but their pride will not allow them to be the one to confess and become the submissive one in the relationship! Love is war, and their battle to make the other confess begins now!</div>
+                            <div class="book-brief-more">More details...</div>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://www.tenmanga.com/book/KAGUYA-SAMA+WA+KOKURASETAI+-+TENSAI-TACHI+NO+RENAI+ZUNOUSEN.html" alt="KAGUYA-SAMA WA KOKURASETAI - TENSAI-TACHI NO RENAI ZUNOUSEN" title="KAGUYA-SAMA WA KOKURASETAI - TENSAI-TACHI NO RENAI ZUNOUSEN">
+                    <div class="book-name">KAGUYA-SAMA WA KOKURASETAI - TENSAI-TACHI NO RENAI ZUNOUSEN</div>
+                </a>
+                <div class="cate-ls">
+                                                            <a href="https://www.tenmanga.com/category/comedy.html" alt="comedy"><div class="cate-item">comedy</div></a>
+                                                                                <a href="https://www.tenmanga.com/category/romance.html" alt="romance"><div class="cate-item">romance</div></a>
+                                                                                                                                        </div>
+                <div class="book-chp-info">41950 Views</div>
+            </div>
+        </div>
+                <div class="book-item">
+            <div class="book-bg"></div>
+            <div class="book-inner-box">
+                <a href="https://www.tenmanga.com/book/DR.+STONE.html" alt="DR. STONE" title="DR. STONE">
+                    <div class="book-img">
+                        <img src="/files/img/default.png" class="lazy-img" lazy_url="https://ta1.yx247.com/files/img/logo/201703/201703022140046332.jpg" onerror="this.src='/files/img/default.png'" alt=""/>
+                    </div>
+                </a>
+                <a href="https://www.tenmanga.com/book/DR.+STONE.html">
+                    <div class="book-brief-box">
+                        <div class="book-brief-content">
+                            <div class="book-brief-title">Summary</div>
+                            <div class="book-brief-txt">N/A</div>
+                            <div class="book-brief-more">More details...</div>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://www.tenmanga.com/book/DR.+STONE.html" alt="DR. STONE" title="DR. STONE">
+                    <div class="book-name">DR. STONE</div>
+                </a>
+                <div class="cate-ls">
+                                                            <a href="https://www.tenmanga.com/category/shounen.html" alt="shounen"><div class="cate-item">shounen</div></a>
+                                                        </div>
+                <div class="book-chp-info">41930 Views</div>
+            </div>
+        </div>
+                <div class="book-item">
+            <div class="book-bg"></div>
+            <div class="book-inner-box">
+                <a href="https://www.tenmanga.com/book/Rookies.html" alt="Rookies" title="Rookies">
+                    <div class="book-img">
+                        <img src="/files/img/default.png" class="lazy-img" lazy_url="https://ta1.yx247.com/files/img/logo/201503/201503220727253896.jpg" onerror="this.src='/files/img/default.png'" alt=""/>
+                    </div>
+                </a>
+                <a href="https://www.tenmanga.com/book/Rookies.html">
+                    <div class="book-brief-box">
+                        <div class="book-brief-content">
+                            <div class="book-brief-title">Summary</div>
+                            <div class="book-brief-txt">Professor Kawato is the new Japanese teacher in the ill-famed Futagotamaga high school, whose baseball club is composed by thugs and bullies who have been suspended for a year from all school competitions, for causing a brawl during an official match. Now that the suspension is over, the only club members left are only interested in women, smoking and doing nothing until, under professor Kawato guidance, they discover a new dream called Koshien. However, the road to Koshien is far from easy as many obstacles awaits them.</div>
+                            <div class="book-brief-more">More details...</div>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://www.tenmanga.com/book/Rookies.html" alt="Rookies" title="Rookies">
+                    <div class="book-name">Rookies</div>
+                </a>
+                <div class="cate-ls">
+                                                            <a href="https://www.tenmanga.com/category/comedy.html" alt="comedy"><div class="cate-item">comedy</div></a>
+                                                                                <a href="https://www.tenmanga.com/category/school+life.html" alt="school life"><div class="cate-item">school life</div></a>
+                                                                                                                                        </div>
+                <div class="book-chp-info">39699 Views</div>
+            </div>
+        </div>
+                <div class="book-item">
+            <div class="book-bg"></div>
+            <div class="book-inner-box">
+                <a href="https://www.tenmanga.com/book/HATSUJOU+KARESHI.html" alt="HATSUJOU KARESHI" title="HATSUJOU KARESHI">
+                    <div class="book-img">
+                        <img src="/files/img/default.png" class="lazy-img" lazy_url="https://ta1.yx247.com/files/img/logo/201503/201503220458075247.jpg" onerror="this.src='/files/img/default.png'" alt=""/>
+                    </div>
+                </a>
+                <a href="https://www.tenmanga.com/book/HATSUJOU+KARESHI.html">
+                    <div class="book-brief-box">
+                        <div class="book-brief-content">
+                            <div class="book-brief-title">Summary</div>
+                            <div class="book-brief-txt">Collection of oneshots
+
+1) Punishment Sweets
+Misaki forgets his boyfriend Rui's birthday, how can he make it up to him?
+
+2) Love Fever Boy
+
+3) Hot-to-Trot♥Boyfriend
+
+4) Phantom♥Boyfriend?!
+
+5) Love♥Fighter!
+
+6) Oppai Fighter!
+
+7) Himura-sensei no Junan (The Suffering of Dr. Himura)
+Himura Yuu is a high-school doctor with a serious shota complex and there's only one person standing in the way of his virtual smorgasbord; his colleague, Ashiya. Himura is clueless as to why Ashiya interrupts him everyday, but when he learns of their previous connection, things become all too clear.
+
+8) Himura-sensei no Moekare (Himura-sensei's Moe Boyfriend)
+
+9) Lonely Little Bird
+
+10) Love♥Love Je t'aime</div>
+                            <div class="book-brief-more">More details...</div>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://www.tenmanga.com/book/HATSUJOU+KARESHI.html" alt="HATSUJOU KARESHI" title="HATSUJOU KARESHI">
+                    <div class="book-name">HATSUJOU KARESHI</div>
+                </a>
+                <div class="cate-ls">
+                                                            <a href="https://www.tenmanga.com/category/Adult.html" alt="Adult"><div class="cate-item">Adult</div></a>
+                                                                                <a href="https://www.tenmanga.com/category/comedy.html" alt="comedy"><div class="cate-item">comedy</div></a>
+                                                                                                                                        </div>
+                <div class="book-chp-info">39674 Views</div>
+            </div>
+        </div>
+                <div class="book-item">
+            <div class="book-bg"></div>
+            <div class="book-inner-box">
+                <a href="https://www.tenmanga.com/book/Midnight+Secretary.html" alt="Midnight Secretary" title="Midnight Secretary">
+                    <div class="book-img">
+                        <img src="/files/img/default.png" class="lazy-img" lazy_url="https://ta1.yx247.com/files/img/logo/201507/201507062003542229.jpg" onerror="this.src='/files/img/default.png'" alt=""/>
+                    </div>
+                </a>
+                <a href="https://www.tenmanga.com/book/Midnight+Secretary.html">
+                    <div class="book-brief-box">
+                        <div class="book-brief-content">
+                            <div class="book-brief-title">Summary</div>
+                            <div class="book-brief-txt">From Viz:
+Kaya Satozuka is a brilliant secretary who excels at her job, which is why she doesn't bat an eye when she's assigned to be personal secretary to Kyohei Touma, the very difficult managing director of Touma Foods. It doesn't faze her when her new boss seems determined t...&nbsp; 
+                 From Viz:
+Kaya Satozuka is a brilliant secretary who excels at her job, which is why she doesn't bat an eye when she's assigned to be personal secretary to Kyohei Touma, the very difficult managing director of Touma Foods. It doesn't faze her when her new boss seems determined to make her fail, and she even manages to take it in stride when she discovers the secret behind his prickly behavior…he's a vampire! But while Kaya easily adapts to late nights and keeping a schedule of his &quot;dinner dates&quot;, will her ultra-competence help when Kyohei's smoldering gaze starts turning her way?!&nbsp;Show less</div>
+                            <div class="book-brief-more">More details...</div>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://www.tenmanga.com/book/Midnight+Secretary.html" alt="Midnight Secretary" title="Midnight Secretary">
+                    <div class="book-name">Midnight Secretary</div>
+                </a>
+                <div class="cate-ls">
+                                                            <a href="https://www.tenmanga.com/category/drama.html" alt="drama"><div class="cate-item">drama</div></a>
+                                                                                <a href="https://www.tenmanga.com/category/harem.html" alt="harem"><div class="cate-item">harem</div></a>
+                                                                                                                                                                                </div>
+                <div class="book-chp-info">39353 Views</div>
+            </div>
+        </div>
+                <div class="book-item">
+            <div class="book-bg"></div>
+            <div class="book-inner-box">
+                <a href="https://www.tenmanga.com/book/PEERLESS+ALCHEMIST.html" alt="PEERLESS ALCHEMIST" title="PEERLESS ALCHEMIST">
+                    <div class="book-img">
+                        <img src="/files/img/default.png" class="lazy-img" lazy_url="https://ta1.yx247.com/files/img/logo/201805/201805230430072913.jpg" onerror="this.src='/files/img/default.png'" alt=""/>
+                    </div>
+                </a>
+                <a href="https://www.tenmanga.com/book/PEERLESS+ALCHEMIST.html">
+                    <div class="book-brief-box">
+                        <div class="book-brief-content">
+                            <div class="book-brief-title">Summary</div>
+                            <div class="book-brief-txt">She is the greatest and the last cultivator of the twenty-fourth century, however due to a certain mishap, she crossed into another world, into another body which has families oppressing her, a scumbag fiance abusing and steping over her?? Trying to take advantage of her now? Keke! Knocking on death?s door! Those who follow her will prosper, and those that oppose shall die! Behold as she pays back those who attempts to climb over her several folds!</div>
+                            <div class="book-brief-more">More details...</div>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://www.tenmanga.com/book/PEERLESS+ALCHEMIST.html" alt="PEERLESS ALCHEMIST" title="PEERLESS ALCHEMIST">
+                    <div class="book-name">PEERLESS ALCHEMIST</div>
+                </a>
+                <div class="cate-ls">
+                                                            <a href="https://www.tenmanga.com/category/adventure.html" alt="adventure"><div class="cate-item">adventure</div></a>
+                                                                                <a href="https://www.tenmanga.com/category/fantasy.html" alt="fantasy"><div class="cate-item">fantasy</div></a>
+                                                                                                </div>
+                <div class="book-chp-info">39198 Views</div>
+            </div>
+        </div>
+            </div>
+</div>
+
+<div class="last-his-box dis-hide" id="last-his-box">
+    <div class="last-his-item">
+        <div class="last-his-title">Last time you read</div>
+        <div class="last-his-cls pointer" id="last-his-cls"><span class="ifont-cross"></span></div>
+    </div>
+    <div class="last-his-item">
+        <div class="last-his-chp-img">
+            <a href="" class="last-his-chp-url">
+                <img src="" id="last-his-chp-img"/>
+            </a>
+        </div>
+        <div class="last-his-chp-info">
+            <a href="" class="last-his-chp-url">
+                <div class="last-his-chp-name" id="last-his-chp-name"></div>
+            </a>
+        </div>
+        <a href="" class="last-his-chp-url">
+            <div class="last-his-btn">Continue</div>
+        </a>
+    </div>
+</div>
+<div class="footer-box">
+    <div class="footer">
+        <div class="footer-sites-rec">
+            <a href="https://www.mangadogs.com/download.html"><div class="footer-site-rec">Download</div></a>
+            <a href="https://www.niadd.com/"><div class="footer-site-rec">Manga Reviews</div></a>
+            <a href="https://www.novelcool.com/"><div class="footer-site-rec">Novel Cool</div></a>
+        </div>
+        <div class="site-copy-box">
+            <div class="site-copyright">&copy;2021 Tenmanga.com</div>
+        </div>
+    </div>
+</div>
+<!--登录 注册 忘记密码-->
+<div class="model-module login" model_name="login">
+    <div class="model-cls-layer"></div>
+    <div class="model-close ifont-cross pointer-cursor" title=""></div>
+    <table class="model-table">
+        <tr>
+            <td>
+                <div class="model-body login-box">
+                    <div class="model-header">
+                        <div class="model-title">Sign In</div>
+                    </div>
+
+                    <!--主内容-->
+                    <div class="model-content">
+                        <script>
+                            (function () {
+                                var str = "<form id=\"login-form\" method=\"post\" action=\""+ajax_url+"/login/post.html\" form_valid=\"0\">";
+                                document.write(str);
+                            })();
+                        </script>
+                            <div class="login-item">
+                                <label class="login-label">Email</label>
+                                <span class="ifont-email"></span>
+                                <input type="email" name="user_name" required="required" placeholder="Email"/>
+                                <div class="login-item-hint" check_name="user_name"></div>
+                            </div>
+                            <div class="login-item">
+                                <label class="login-label">Password</label>
+                                <span class="ifont-lock"></span>
+                                <input type="password" name="user_pw" required="required"  placeholder="Password"/>
+                                <div class="login-item-hint" check_name="user_pw"></div>
+                            </div>
+                            <!--忘记密码-->
+                            <a href="/forgotten"><div class="login-forget">Forget Password</div></a>
+                        </form>
+                        <div class="login-btns">
+                            <a href="/register"><button class="login-register-btn" type="button">Sign Up</button></a>
+                            <button class="login-submit-btn" id="login-submit-btn" type="button">Sign In</button>
+                        </div>
+
+                        <!--三方登陆-->
+                        <div class="login-sign-with"><div class="login-sign-with-word single-line-ellipsis">Sign In With</div></div>
+                        <div class="login-sign-with-list">
+                            <a href="/login/google.html" title="Google"><div class="login-sign-with-item google"><span class="ifont-google-plus"></span></div></a>
+                            <!--a href="/login/facebook.html" title="Facebook"><div class="login-sign-with-item facebook"><span class="ifont-facebook"></span></div></a-->
+                        </div>
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </table>
+</div><div class="model-module register" model_name="register">
+    <div class="model-cls-layer"></div>
+    <div class="model-close ifont-cross pointer-cursor" title=""></div>
+    <table class="model-table">
+        <tr>
+            <td>
+                <div class="model-body register-box">
+                    <div class="model-header">
+                        <div class="model-title">Sign Up</div>
+                    </div>
+
+                    <!--主内容-->
+                    <div class="model-content">
+                        <script>
+                            (function () {
+                                var str = "<form id=\"register-form\" name=\"\" action=\""+ajax_url+"/register/post.html\" method=\"post\" form_valid=\"0\">";
+                                document.write(str);
+                            })();
+                        </script>
+                            <div class="login-item">
+                                <label class="login-label">Email</label>
+                                <span class="ifont-email"></span>
+                                <input type="email" name="user_name" required="required" placeholder="Email"/>
+                                <div class="login-item-hint" check_name="user_name"></div>
+                            </div>
+                            <div class="login-item">
+                                <label class="login-label">Password</label>
+                                <span class="ifont-lock"></span>
+                                <input type="password" name="user_pw" required="required"  placeholder="Password"/>
+                                <div class="login-item-hint" check_name="user_pw"></div>
+                            </div>
+                            <div class="login-item">
+                                <label class="login-label">Confirm Password</label>
+                                <span class="ifont-lock"></span>
+                                <input type="password" name="user_pw_retype" required="required"  placeholder="Confirm Password"/>
+                                <div class="login-item-hint" check_name="user_pw_retype"></div>
+                            </div>
+                            <div class="login-item">
+                                <label class="login-label">Name</label>
+                                <span class="ifont-user"></span>
+                                <input type="text" name="display_name" required="required"  placeholder="Name" minlength="5"/>
+                                <div class="login-item-hint" check_name="display_name"></div>
+                            </div>
+                        </form>
+
+                        <div class="register-policy checkbox-container">
+                            <span class="ifont-checkbox-checked" checkbox_target="register_agree"></span>
+                            <input type="checkbox" required="required" checked="checked" name="agree" target_name="register_agree"/>
+                            <a href="/login/agreement.html">I agree to the terms and conditions</a>
+                        </div>
+                        <div class="login-item-hint" check_name="agree"></div>
+                        <button id="register-submit-btn" class="register-submit-btn" type="button">Sign Up</button>
+
+                        <a href="/login"><div class="login-exist model-trigger" model_type="only" model_target_name="login">Sign In</div></a>
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </table>
+</div><div class="model-module forget-pwd" model_name="forget_pwd">
+    <table class="model-table">
+        <tr>
+            <td>
+                <div class="model-body forget-box">
+                    <div class="model-header">
+                        <div class="model-title">Find your password</div>
+                    </div>
+
+                    <!--主内容-->
+                    <div class="model-content">
+                        <form id="forget-pwd-form" method="post" form_valid="0">
+                            <div class="login-item">
+                                <label class="login-label">Email</label>
+                                <span class="ifont-email"></span>
+                                <input type="email" name="email" required="required" placeholder="Email"/>
+                                <div class="login-item-hint" check_name="email"></div>
+                            </div>
+
+                            <button class="forgotten-submit-btn find-password-btn" id="forgotten-submit-btn" type="button">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>
+<!--关注作品-->
+<div class="model-module nav_bk_follow" model_name="nav_bk_follow">
+    <div class="model-cls-layer"></div>
+    <!--主内容-->
+    <div class="model-content">
+        <div class="navbk-cate-list">
+            <div class="navbk-cate-list-content">
+                <div class="navbk-cate-item active">Following</div>
+                <div class="navbk-cate-item model-trigger" model_target_name="nav_bk_history" model_type="only" model_login="true">History</div>
+            </div>
+        </div>
+
+        <table >
+            <tr>
+                <td>
+                    <div class="navbk-book-ls" id="navbk-bk-follow-ls">
+                        <div class="navbk-nobook-hint">Following is empty</div>
+                    </div>
+                </td>
+                <td class="navbk-book-all-td">
+                    <a href="/account/following.html"><div class="navbk-book-all">View all</div></a>
+                </td>
+            </tr>
+        </table>
+
+    </div>
+</div><div class="model-module nav_bk_follow" model_name="nav_bk_history">
+    <div class="model-cls-layer"></div>
+    <!--主内容-->
+    <div class="model-content">
+        <div class="navbk-cate-list">
+            <div class="navbk-cate-list-content">
+                <div class="navbk-cate-item model-trigger" model_target_name="nav_bk_follow" model_type="only" model_login="true">Following</div>
+                <div class="navbk-cate-item active">History</div>
+            </div>
+        </div>
+
+        <table >
+            <tr>
+                <td>
+                    <div class="navbk-book-ls" id="navbk-bk-history-ls">
+                        <div class="navbk-nobook-hint">History is empty</div>
+                    </div>
+                </td>
+                <td class="navbk-book-all-td">
+                    <a href="/account/history.html"><div class="navbk-book-all">View all</div></a>
+                </td>
+            </tr>
+        </table>
+
+    </div>
+</div>
+<!--返回顶部按钮-->
+<div class="backtop-trigger"><span class="ifont-backtop"></span></div>
+
+<!--语言包-->
+<div style="display: none;">
+    <span msg_lang="More">More</span>
+    <span msg_lang="Followed">Followed</span>
+    <span msg_lang="Following">Following</span>
+    <span msg_lang="Success">Success</span>
+    <span msg_lang="Follow">Follow</span>
+    <span msg_lang="Email_format_wrong">Email's format is incorrect</span>
+    <span msg_lang="Email_has_exist">Email has been registered</span>
+    <span msg_lang="Email_not_exist">Email doesn't exist</span>
+    <span msg_lang="Pwd_length">Must be between 6 to 14 characters</span>
+    <span msg_lang="New_pwd_not_same">Passwords do not match</span>
+    <span msg_lang="Required">Required</span>
+    <span msg_lang="Succeed">Succeed</span>
+    <span msg_lang="Failed">Failed</span>
+    <span msg_lang="Fail_login">Failed to login</span>
+    <span msg_lang="Out_of_time">Link is expired</span>
+    <span msg_lang="Warn">Warning</span>
+    <span msg_lang="Uname_length">Must be between 4 to 30 characters</span>
+    <span msg_lang="uemail_upwd_wrong">Email or password is wrong</span>
+</div><script src="/files/js/jquery.min.js?v=47" defer></script>
+<script src="/files/js/jquery.form.min.js?v=47" defer></script>
+<script src="/files/dist/js/index/index.js?v=47" defer></script>
+<script src="/files/js/yh_tj.js?v=47" defer></script>
+</body>
+</html>
